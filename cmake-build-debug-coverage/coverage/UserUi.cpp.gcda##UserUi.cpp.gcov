@@ -1,0 +1,307 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Source/View/UserUi.cpp
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\View\UserUi.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\View\UserUi.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by badiu on 3/25/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "../../Header/View/UserUi.h"
+        -:    6:
+function _ZN6UserUiC2ER14UserController called 1 returned 100% blocks executed 100%
+        1:    7:UserUi::UserUi(UserController &controller) : controller(controller) {
+        -:    8:
+        1:    9:}
+        -:   10:
+function _Z9printMenuv called 0 returned 0% blocks executed 0%
+    #####:   11:void printMenu() {
+    #####:   12:    cout << "User-Menu: \n";
+    %%%%%:   12-block  0
+call    0 never executed
+    #####:   13:    cout << "Press 0 to exit. \n";
+call    0 never executed
+    #####:   14:    cout << "Press 1 to see tutorials having a given presenter. \n";
+call    0 never executed
+    #####:   15:    cout << "Press 2 to see watch list. \n";
+call    0 never executed
+    #####:   16:    cout << "Press 3 to edit watch list. \n";
+call    0 never executed
+    #####:   17:}
+        -:   18:
+function _ZN6UserUi4menuEv called 0 returned 0% blocks executed 0%
+    #####:   19:void UserUi::menu() {
+        -:   20:    int choice;
+        -:   21:    while (true) {
+    #####:   22:        printMenu();
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   23:        cout << "Insert choice: ";
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:        cin >> choice;
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   25:        cin.get();
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   26:        if (choice == 0)
+    %%%%%:   26-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   27:            return;
+    %%%%%:   27-block  0
+    %%%%%:   27-block  1
+        -:   28:
+    #####:   29:        if (choice == 1) {
+    %%%%%:   29-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   30:            string presenter;
+    %%%%%:   30-block  0
+call    0 never executed
+    #####:   31:            cout << "Insert Presenter name: \n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:            getline(cin, presenter);
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:            printTutorialsByPresenter(presenter);
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   34:
+    #####:   35:        }
+    %%%%%:   35-block  0
+call    0 never executed
+    $$$$$:   35-block  1
+call    1 never executed
+        -:   36:
+    #####:   37:        if (choice == 2) {
+    %%%%%:   37-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   38:            controller.printWatchList();
+    %%%%%:   38-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   39:        }
+        -:   40:
+    #####:   41:        if(choice == 3)
+    %%%%%:   41-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   42:        {
+    #####:   43:            editWatchList();
+    %%%%%:   43-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   44:        }
+    #####:   45:    }
+    %%%%%:   45-block  0
+        -:   46:
+        -:   47:}
+        -:   48:
+function _ZN6UserUi25printTutorialsByPresenterERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   49:void UserUi::printTutorialsByPresenter(string &presenter) {
+    #####:   50:    Repository tutorial_list = controller.getTutorialsByPresenter(
+    #####:   51:            presenter); //Iau lista sortata sau intreaga din controller
+    %%%%%:   51-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   52:
+        -:   53:    //First if to print in case of a empty the the list with all elements all at once
+    #####:   54:    if (presenter.empty())
+    %%%%%:   54-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   55:        controller.printTutorialList();
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   56:    else//Second to print in case of a presenter the list with elements one by one
+        -:   57:    {
+        -:   58:        int choice;
+    #####:   59:        for (int i = 0; i < tutorial_list.getSize(); i++) {
+    %%%%%:   59-block  0
+    %%%%%:   59-block  1
+    %%%%%:   59-block  2
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   60:            cout << tutorial_list[i];
+    %%%%%:   60-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   61:            cout << "Open in browser(Press 1) or next(Press 2) or addToWatchList(Press3) or exit(Press 0): ";
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   62:            cin >> choice;
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   63:            if (choice == 1) { //Creating a char to execute the open command
+    %%%%%:   63-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   64:                string command = "<Chrome> " + tutorial_list[i].getLink();
+    %%%%%:   64-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   64-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    $$$$$:   64-block  2
+    #####:   65:                char *str = &command[0];
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   66:                system(str);
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   67:            }
+    %%%%%:   67-block  0
+call    0 never executed
+    $$$$$:   67-block  1
+call    1 never executed
+        -:   68:
+    #####:   69:            if (choice == 2 && (i + 1) == tutorial_list.getSize()) //Daca am ajuns la ultimul element o iau de la capat
+    %%%%%:   69-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   69-block  1
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   69-block  2
+    %%%%%:   69-block  3
+    %%%%%:   69-block  4
+branch  5 never executed
+branch  6 never executed
+    #####:   70:                i = -1;
+    %%%%%:   70-block  0
+        -:   71:
+    #####:   72:            if(choice == 3)
+    %%%%%:   72-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   73:                this->controller.addTutorialToWatchList(tutorial_list[i]);
+    %%%%%:   73-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:   74:
+    #####:   75:            if (choice == 0)
+    %%%%%:   75-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   76:                break;
+    %%%%%:   76-block  0
+        -:   77:        }
+    #####:   78:        cout << "Done! \n";
+    %%%%%:   78-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   79:    }
+    #####:   80:}
+    %%%%%:   80-block  0
+call    0 never executed
+    $$$$$:   80-block  1
+call    1 never executed
+        -:   81:
+function _ZN6UserUi13editWatchListEv called 0 returned 0% blocks executed 0%
+    #####:   82:void UserUi::editWatchList() {
+    #####:   83:    list<Tutorial> watchList = controller.getWatchList();
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   84:    int choice;
+    #####:   85:    for(auto & it : watchList) {
+    %%%%%:   85-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   85-block  1
+call    2 never executed
+    %%%%%:   85-block  2
+call    3 never executed
+    %%%%%:   85-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   86:        cout << it;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   87:        cout << "Press 1 to like and delete or 2 for delete only or any key to skip. ";
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   88:        cin >> choice;
+    %%%%%:   88-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   89:        if (choice == 1)
+    %%%%%:   89-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   90:        {
+    #####:   91:            controller.likeTutorial(it);
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:            controller.deleteTutorialFromWatchList(it);
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   93:        }
+    #####:   94:        if(choice == 2)
+    %%%%%:   94-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   95:        {
+    #####:   96:            controller.deleteTutorialFromWatchList(it);
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   97:        }
+        -:   98:
+        -:   99:    }
+    #####:  100:}
+    %%%%%:  100-block  0
+call    0 never executed
+    $$$$$:  100-block  1
+call    1 never executed

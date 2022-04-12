@@ -1,0 +1,71 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Header/Model/Tutorial.h
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Controller\AdminController.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Controller\AdminController.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2://
+        -:    3:// Created by badiu on 3/22/2022.
+        -:    4://
+        -:    5:
+        -:    6:#ifndef LAB_5_6_PB_4_TUTORIAL_H
+        -:    7:#define LAB_5_6_PB_4_TUTORIAL_H
+        -:    8:#include <string>
+        -:    9:#include <iostream>
+        -:   10:#include <new>
+        -:   11:using namespace std;
+        -:   12:
+        -:   13:class Tutorial {
+        -:   14:private:
+        -:   15:    string title;
+        -:   16:    string presenter;
+        -:   17:    int minutes{}, seconds{};
+        -:   18:    int likes{};
+        -:   19:    string link;
+        -:   20:
+        -:   21:
+        -:   22:public:
+        -:   23:    Tutorial();
+        -:   24:    Tutorial(const string &new_title,const string &new_presenter,const int &new_minutes,const int &new_seconds,const string &new_link);
+        -:   25:
+function _ZN8Tutorial8getTitleB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   26:    string getTitle(){return title;};
+    %%%%%:   26-block  0
+call    0 never executed
+        -:   27:    void setTitle(string new_title);
+        -:   28:
+function _ZN8Tutorial12getPresenterB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   29:    string getPresenter(){return presenter;};
+    %%%%%:   29-block  0
+call    0 never executed
+        -:   30:    void setPresenter(string new_presenter);
+        -:   31:
+function _ZN8Tutorial10getMinutesEv called 0 returned 0% blocks executed 0%
+    #####:   32:    int getMinutes(){return minutes;};
+    %%%%%:   32-block  0
+        -:   33:    void setMinutes(int new_minutes);
+        -:   34:
+function _ZN8Tutorial10getSecondsEv called 0 returned 0% blocks executed 0%
+    #####:   35:    int getSeconds(){return seconds;};
+    %%%%%:   35-block  0
+function _ZN8Tutorial10setSecondsEi called 0 returned 0% blocks executed 0%
+    #####:   36:    inline void setSeconds(int new_seconds){seconds = new_seconds;};
+        -:   37:
+        -:   38:    int getLikes(){return likes;};
+        -:   39:    void like(){likes++;};
+        -:   40:    void dislike(){likes--;};
+        -:   41:    inline void setLikes(int &new_likes){likes = new_likes;};
+        -:   42:
+function _ZN8Tutorial7getLinkB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   43:    string getLink(){return link;};
+    %%%%%:   43-block  0
+call    0 never executed
+function _ZN8Tutorial7setLinkENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   44:    inline void setLink(string new_link){link = new_link;};
+    %%%%%:   44-block  0
+call    0 never executed
+        -:   45:    friend ostream& operator<<(ostream& os, const Tutorial& entity);
+        -:   46:    bool operator== (const Tutorial& entity) const;
+        -:   47:};
+        -:   48:
+        -:   49:
+        -:   50:#endif //LAB_5_6_PB_4_TUTORIAL_H

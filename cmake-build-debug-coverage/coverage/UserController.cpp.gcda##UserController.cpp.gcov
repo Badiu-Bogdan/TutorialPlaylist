@@ -1,0 +1,190 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Source/Controller/UserController.cpp
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Controller\UserController.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Controller\UserController.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by badiu on 3/25/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "../../Header/Controller/UserController.h"
+        -:    6:
+function _ZN14UserControllerC2ER10RepositoryI8TutorialES3_ called 1 returned 100% blocks executed 100%
+        1:    7:UserController::UserController(Repository<Tutorial> &new_database, Repository<Tutorial> &new_watchlist) : database(new_database),
+        1:    8:                                                                                      watchList(new_watchlist) {
+        -:    9:
+        1:   10:}
+        -:   11:
+function _ZN14UserController14printWatchListEv called 0 returned 0% blocks executed 0%
+    #####:   12:void UserController::printWatchList() {
+    #####:   13:    for(int i = 0; i < watchList.getSize();i++)
+    %%%%%:   13-block  0
+    %%%%%:   13-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   14:        cout << watchList[i];
+    %%%%%:   14-block  0
+call    0 never executed
+call    1 never executed
+    #####:   15:    cout << "Done. \n";
+    %%%%%:   15-block  0
+call    0 never executed
+        -:   16:
+    #####:   17:}
+        -:   18:
+        -:   19:
+function _ZN14UserController23getTutorialsByPresenterERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   20:Repository<struct Tutorial> UserController::getTutorialsByPresenter(string &presenter) {
+    #####:   21:    Repository<Tutorial> aux{};
+    %%%%%:   21-block  0
+call    0 never executed
+    #####:   22:    for(int i = 0; i < this->database.getSize();i++)
+    %%%%%:   22-block  0
+    %%%%%:   22-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   23:        if(database[i].getPresenter() == presenter)
+    %%%%%:   23-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   23-block  1
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:   24:            aux.add(this->database[i]);
+    %%%%%:   24-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   24-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   24-block  2
+call    7 never executed
+    $$$$$:   24-block  3
+call    8 never executed
+    $$$$$:   24-block  4
+        -:   25:
+        -:   26:
+    #####:   27:    return aux;
+    %%%%%:   27-block  0
+    %%%%%:   27-block  1
+    =====:   28:}
+    $$$$$:   28-block  0
+call    0 never executed
+        -:   29:
+function _ZN14UserController17printTutorialListEv called 0 returned 0% blocks executed 0%
+    #####:   30:void UserController::printTutorialList() {
+    #####:   31:    for(int i = 0; i < database.getSize();i++)
+    %%%%%:   31-block  0
+    %%%%%:   31-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:        cout << database[i];
+    %%%%%:   32-block  0
+call    0 never executed
+call    1 never executed
+    #####:   33:    cout << "Done. \n";
+    %%%%%:   33-block  0
+call    0 never executed
+    #####:   34:}
+        -:   35:
+function _ZN14UserController22addTutorialToWatchListER8Tutorial called 0 returned 0% blocks executed 0%
+    #####:   36:int UserController::addTutorialToWatchList(Tutorial &entity) {
+    #####:   37:    this->watchList.add(entity);
+    %%%%%:   37-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   37-block  1
+call    4 never executed
+    $$$$$:   37-block  2
+call    5 never executed
+    #####:   38:}
+        -:   39:
+function _ZN14UserController27deleteTutorialFromWatchListER8Tutorial called 0 returned 0% blocks executed 0%
+    #####:   40:int UserController::deleteTutorialFromWatchList(Tutorial& entity) {
+    #####:   41:    for(int i = 0; i < watchList.getSize();i++)
+    %%%%%:   41-block  0
+    %%%%%:   41-block  1
+    %%%%%:   41-block  2
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   42:        if(watchList[i] == entity)
+    %%%%%:   42-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   42-block  1
+branch  4 never executed
+branch  5 never executed
+        -:   43:        {
+    #####:   44:            watchList.removeElement(i);
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   45:            return 1;
+    %%%%%:   45-block  0
+        -:   46:        }
+    #####:   47:    return 0;
+    %%%%%:   47-block  0
+        -:   48:}
+        -:   49:
+function _ZN14UserController12likeTutorialER8Tutorial called 0 returned 0% blocks executed 0%
+    #####:   50:void UserController::likeTutorial(Tutorial &entity) {
+    #####:   51:    for(int i =0;i < database.getSize();i++)
+    %%%%%:   51-block  0
+    %%%%%:   51-block  1
+    %%%%%:   51-block  2
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   52:        if(database[i] == entity)
+    %%%%%:   52-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:   53:        {
+    #####:   54:            database[i].like();
+    %%%%%:   54-block  0
+call    0 never executed
+call    1 never executed
+    #####:   55:            return;
+        -:   56:        }
+        -:   57:}
+        -:   58:
+function _ZN14UserController12getWatchListB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   59:list<Tutorial> UserController::getWatchList() {
+    #####:   60:    list<Tutorial> aux;
+    %%%%%:   60-block  0
+call    0 never executed
+    #####:   61:    for(int i=0;i<watchList.getSize();i++)
+    %%%%%:   61-block  0
+    %%%%%:   61-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   62:        aux.push_back(watchList[i]);
+    %%%%%:   62-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   63:    return aux;
+    %%%%%:   63-block  0
+    %%%%%:   63-block  1
+    =====:   64:}
+    $$$$$:   64-block  0
+call    0 never executed

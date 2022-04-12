@@ -1,0 +1,242 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Source/View/AdminUi.cpp
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\View\AdminUi.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\View\AdminUi.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by badiu on 3/25/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "../../Header/View/AdminUi.h"
+        -:    6:
+function _Z10print_menuv called 1 returned 100% blocks executed 100%
+        1:    7:void print_menu() {
+        1:    8:    cout << "\n";
+        1:    8-block  0
+call    0 returned 1
+        1:    9:    cout << "Menu: \n";
+call    0 returned 1
+        1:   10:    cout << "Press 1 to print all tutorials. \n";
+call    0 returned 1
+        1:   11:    cout << "Press 2 to add a new tutorial. \n";
+call    0 returned 1
+        1:   12:    cout << "Press 3 to delete a tutorial. \n";
+call    0 returned 1
+        1:   13:    cout << "Press 4 to update a tutorial. \n";
+call    0 returned 1
+        1:   14:}
+        -:   15:
+function _Z13read_tutorialv called 0 returned 0% blocks executed 0%
+    #####:   16:Tutorial read_tutorial() {
+    #####:   17:    string new_title;
+    %%%%%:   17-block  0
+call    0 never executed
+    #####:   18:    string new_presenter;
+call    0 never executed
+        -:   19:    int new_minutes;
+        -:   20:    int new_seconds;
+    #####:   21:    string new_link;
+call    0 never executed
+        -:   22:
+        -:   23:    //cin.clear();
+        -:   24:    //fflush(stdin);
+    #####:   25:    cout << "Insert the title: \n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   26:    cin.get();
+    %%%%%:   26-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   27:    getline(cin, new_title);
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   28:    cout << "Insert the presenter: \n";
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   29:    getline(cin, new_presenter);
+    %%%%%:   29-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   30:    cout << "Insert duration minutes: \n";
+    %%%%%:   30-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   31:    cin >> new_minutes;
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:    cout << "Insert duration seconds: \n";
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:    cin >> new_seconds;
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   34:    cout << "Insert link: \n";
+    %%%%%:   34-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   35:    cin.get();
+    %%%%%:   35-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   36:    getline(cin, new_link);
+    %%%%%:   36-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   37:
+    #####:   38:    Tutorial new_tutorial{new_title, new_presenter, new_minutes, new_seconds, new_link};
+    %%%%%:   38-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   39:    return new_tutorial;
+    %%%%%:   39-block  0
+    %%%%%:   39-block  1
+        -:   40:
+    #####:   41:}
+    %%%%%:   41-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   41-block  1
+call    3 never executed
+    $$$$$:   41-block  2
+call    4 never executed
+    $$$$$:   41-block  3
+call    5 never executed
+        -:   42:
+function _ZN7AdminUi4menuEv called 1 returned 100% blocks executed 24%
+        1:   43:void AdminUi::menu() {
+        -:   44:    int choice;
+        -:   45:    int id;
+        -:   46:    while (true) {
+        1:   47:        print_menu();
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48:        cout << "Please enter a value: ";
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49:        cin >> choice;
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50:        cin.get();
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51:        if (choice == 0)
+        1:   51-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   52:            return;
+        1:   52-block  0
+        1:   52-block  1
+        -:   53:
+    #####:   54:        if (choice == 1) {
+    %%%%%:   54-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   55:            controller.printAll();
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   56:        }
+        -:   57:
+    #####:   58:        if (choice == 2) {
+    %%%%%:   58-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   59:            Tutorial new_tutorial = read_tutorial();
+    %%%%%:   59-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   60:            controller.addTutorial(new_tutorial);
+    %%%%%:   60-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   61:        }
+    %%%%%:   61-block  0
+call    0 never executed
+    $$$$$:   61-block  1
+call    1 never executed
+        -:   62:
+    #####:   63:        if(choice == 3)
+    %%%%%:   63-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   64:        {
+    #####:   65:            cout << "Insert id: ";
+    %%%%%:   65-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   66:            cin >> id;
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   67:            controller.deleteTutorial(id);
+    %%%%%:   67-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   68:        }
+        -:   69:
+    #####:   70:        if(choice == 4)
+    %%%%%:   70-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   71:        {
+    #####:   72:            cout << "Insert id: ";
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   73:            cin >> id;
+    %%%%%:   73-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   74:            Tutorial new_tutorial = read_tutorial();
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   75:            controller.updateTutorial(id, new_tutorial);
+    %%%%%:   75-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   76:        }
+    %%%%%:   76-block  0
+call    0 never executed
+    $$$$$:   76-block  1
+call    1 never executed
+        -:   77:
+    #####:   78:    }
+    %%%%%:   78-block  0
+        -:   79:}

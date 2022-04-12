@@ -1,0 +1,11 @@
+# ninja log v5
+6	2174	6701802983487729	CMakeFiles/Lab_5_6_Pb_4.dir/main.cpp.obj	a24e23ae718077c5
+1	297	6714939399966967	build.ninja	c27bc003c823afd3
+778	949	6701808657037685	Lab_5_6_Pb_4.exe	94eb8ec244d0a70
+15	332	6699483395036688	CMakeFiles/Lab_5_6_Pb_4.dir/Source/View/UserUi.cpp.obj	341abb1ee7c7ad3e
+23	335	6699483395056699	CMakeFiles/Lab_5_6_Pb_4.dir/Source/View/Ui.cpp.obj	ea3a12c59170d355
+4	893	6701807562194693	CMakeFiles/Lab_5_6_Pb_4.dir/Source/View/AdminUi.cpp.obj	24db9e8feb5e6de2
+40	2014	6701802981797621	CMakeFiles/Lab_5_6_Pb_4.dir/Source/Model/Repository.cpp.obj	70818df7aef169ff
+30	2122	6701802982747690	CMakeFiles/Lab_5_6_Pb_4.dir/Source/Model/Tutorial.cpp.obj	f979e1355a5356dd
+84	636	6701737552701893	CMakeFiles/Lab_5_6_Pb_4.dir/Header/Controller/UserController.cpp.obj	c109d2f5841ff717
+5	777	6701808655440077	CMakeFiles/Lab_5_6_Pb_4.dir/Source/Controller/AdminController.cpp.obj	35c53d74f46ab586

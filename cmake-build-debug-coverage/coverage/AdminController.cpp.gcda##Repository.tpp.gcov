@@ -1,0 +1,179 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Header/Model/Repository.tpp
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Controller\AdminController.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Controller\AdminController.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2://
+        -:    3:// Created by badiu on 3/29/2022.
+        -:    4://
+        -:    5:
+        -:    6:#ifndef LAB_5_6_PB_4_REPOSITORY_TPP
+        -:    7:#define LAB_5_6_PB_4_REPOSITORY_TPP
+        -:    8:
+        -:    9:template<typename T>
+        -:   10:Repository<T>::Repository() : size(0), capacity(20) {
+        -:   11:    this->elems = new(std::nothrow) T[this->capacity];
+        -:   12:    //if(!this->elems)
+        -:   13:    //throw exception("Allocation of memory failed! \n");
+        -:   14:}
+        -:   15:
+        -:   16:template<typename T>
+        -:   17:Repository<T>::~Repository() {
+        -:   18:    if (this->elems == nullptr)
+        -:   19:        return;
+        -:   20:    else
+        -:   21:        delete[] this->elems;
+        -:   22:
+        -:   23:}
+        -:   24:
+        -:   25:template<typename T>
+function _ZN10RepositoryI8TutorialE3addES0_ called 14 returned 100% blocks executed 80%
+       14:   26:void Repository<T>::add(T entity) {
+       14:   27:    if (size == capacity)
+       14:   27-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 14
+    #####:   28:        resize();
+    %%%%%:   28-block  0
+call    0 never executed
+        -:   29:    else {
+       14:   30:        this->elems[this->size] = entity;
+       14:   30-block  0
+call    0 returned 14
+       14:   31:        this->size++;
+        -:   32:    }
+       14:   33:}
+        -:   34:
+        -:   35:template<typename T>
+function _ZN10RepositoryI8TutorialE6resizeEv called 0 returned 0% blocks executed 0%
+    #####:   36:void Repository<T>::resize() {
+    #####:   37:    int new_capacity = this->capacity * 2;
+    #####:   38:    auto *aux = new(std::nothrow) T[new_capacity];
+    %%%%%:   38-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   38-block  1
+    %%%%%:   38-block  2
+    %%%%%:   38-block  3
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   38-block  4
+    %%%%%:   38-block  5
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   38-block  6
+    %%%%%:   38-block  7
+branch  8 never executed
+branch  9 never executed
+    %%%%%:   38-block  8
+    %%%%%:   38-block  9
+    $$$$$:   38-block 10
+    $$$$$:   38-block 11
+call   10 never executed
+    $$$$$:   38-block 12
+call   11 never executed
+        -:   39:    //memcpy(aux, this->elems, sizeof(TElem)*size);
+    #####:   40:    for (int i = 0; i < size; i++)
+    %%%%%:   40-block  0
+    %%%%%:   40-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   41:        aux[i] = this->elems[i];
+    %%%%%:   41-block  0
+call    0 never executed
+    #####:   42:    delete[] this->elems;
+    %%%%%:   42-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   42-block  1
+    %%%%%:   42-block  2
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   42-block  3
+call    4 never executed
+    %%%%%:   42-block  4
+call    5 never executed
+    #####:   43:    this->elems = aux;
+    #####:   44:    this->capacity = new_capacity;
+    #####:   45:}
+    %%%%%:   45-block  0
+        -:   46:
+        -:   47:template<typename T>
+        -:   48:Repository<T>::Repository(const Repository<T> &copy_repository) {
+        -:   49:    this->size = copy_repository.size;
+        -:   50:    this->capacity = copy_repository.capacity;
+        -:   51:    this->elems = new(std::nothrow) T[this->capacity];
+        -:   52:    for(int i =0;i<this->size;i++)
+        -:   53:    {
+        -:   54:        elems[i] = copy_repository.elems[i];
+        -:   55:    }
+        -:   56:    cout << "Repository copied \n";
+        -:   57:}
+        -:   58:
+        -:   59:template<typename T>
+function _ZN10RepositoryI8TutorialEixEi called 0 returned 0% blocks executed 0%
+    #####:   60:T &Repository<T>::operator[](int pos) {
+    #####:   61:    if (pos > size)
+    %%%%%:   61-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   62:        // throw error index out of bounds
+    #####:   63:        return this->elems[0];
+    %%%%%:   63-block  0
+        -:   64:    else
+    #####:   65:        return this->elems[pos];
+    %%%%%:   65-block  0
+        -:   66:}
+        -:   67:
+        -:   68:template<typename T>
+function _ZN10RepositoryI8TutorialE7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:   69:int Repository<T>::getSize() {
+    #####:   70:    return this->size;
+    %%%%%:   70-block  0
+        -:   71:}
+        -:   72:
+        -:   73:template<typename T>
+function _ZN10RepositoryI8TutorialE13removeElementERi called 0 returned 0% blocks executed 0%
+    #####:   74:void Repository<T>::removeElement(int &pos) {
+    #####:   75:    if (pos > this->size)
+    %%%%%:   75-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   76:        return; //Throw exception
+    %%%%%:   76-block  0
+        -:   77:    else {
+    #####:   78:        for (int i = pos; i < this->size - 1; i++)
+    %%%%%:   78-block  0
+    %%%%%:   78-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   79:            this->elems[i] = this->elems[i + 1];
+    %%%%%:   79-block  0
+call    0 never executed
+    #####:   80:        this->size--;
+    %%%%%:   80-block  0
+        -:   81:    }
+        -:   82:
+        -:   83:}
+        -:   84:
+        -:   85:template<typename T>
+function _ZN10RepositoryI8TutorialE13updateElementERiRS0_ called 0 returned 0% blocks executed 0%
+    #####:   86:void Repository<T>::updateElement(int &pos, T &new_entity) {
+    #####:   87:    if(pos > this->size)
+    %%%%%:   87-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   88:        return; //Throw exception
+    %%%%%:   88-block  0
+        -:   89:    else
+        -:   90:    {
+    #####:   91:        this->elems[pos] = new_entity;
+    %%%%%:   91-block  0
+call    0 never executed
+        -:   92:    }
+        -:   93:}
+        -:   94:
+        -:   95:#endif //LAB_5_6_PB_4_REPOSITORY_TPP
+        -:   96:

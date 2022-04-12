@@ -1,0 +1,28 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Header/View/AdminUi.h
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\main.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2://
+        -:    3:// Created by badiu on 3/25/2022.
+        -:    4://
+        -:    5:
+        -:    6:#ifndef LAB_5_6_PB_4_ADMINUI_H
+        -:    7:#define LAB_5_6_PB_4_ADMINUI_H
+        -:    8:
+        -:    9:
+        -:   10:#include "../Controller/AdminController.h"
+        -:   11:
+        -:   12:class AdminUi {
+        -:   13:private:
+        -:   14:    AdminController &controller;
+        -:   15:
+        -:   16:public:
+function _ZN7AdminUiC1ER15AdminController called 1 returned 100% blocks executed 100%
+        1:   17:    AdminUi(AdminController &controller):controller(controller){};
+        -:   18:    void menu();
+        -:   19:
+        -:   20:};
+        -:   21:
+        -:   22:
+        -:   23:#endif //LAB_5_6_PB_4_ADMINUI_H
