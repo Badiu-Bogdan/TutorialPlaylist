@@ -175,6 +175,48 @@ call    0 never executed
 call    0 never executed
         -:  128:      }
 ------------------
+_ZN9__gnu_cxx13new_allocatorI8TutorialE8allocateEyPKv:
+function _ZN9__gnu_cxx13new_allocatorI8TutorialE8allocateEyPKv called 0 returned 0% blocks executed 0%
+    #####:  103:      allocate(size_type __n, const void* = static_cast<const void*>(0))
+        -:  104:      {
+        -:  105:#if __cplusplus >= 201103L
+        -:  106:	 // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -:  107:	 // 3308. std::allocator<void>().allocate(n)
+        -:  108:	 static_assert(sizeof(_Tp) != 0, "cannot allocate incomplete types");
+        -:  109:#endif
+        -:  110:
+    #####:  111:	if (__builtin_expect(__n > this->_M_max_size(), false))
+    %%%%%:  111-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  112:	  {
+        -:  113:	    // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -:  114:	    // 3190. allocator::allocate sometimes returns too little storage
+    #####:  115:	    if (__n > (std::size_t(-1) / sizeof(_Tp)))
+    %%%%%:  115-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  116:	      std::__throw_bad_array_new_length();
+    %%%%%:  116-block  0
+call    0 never executed
+    #####:  117:	    std::__throw_bad_alloc();
+    %%%%%:  117-block  0
+call    0 never executed
+        -:  118:	  }
+        -:  119:
+        -:  120:#if __cpp_aligned_new
+        -:  121:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+        -:  122:	  {
+        -:  123:	    std::align_val_t __al = std::align_val_t(alignof(_Tp));
+        -:  124:	    return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp), __al));
+        -:  125:	  }
+        -:  126:#endif
+    #####:  127:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
+    %%%%%:  127-block  0
+call    0 never executed
+        -:  128:      }
+------------------
 _ZN9__gnu_cxx13new_allocatorIcE8allocateEyPKv:
 function _ZN9__gnu_cxx13new_allocatorIcE8allocateEyPKv called 0 returned 0% blocks executed 0%
     #####:  103:      allocate(size_type __n, const void* = static_cast<const void*>(0))
@@ -229,6 +271,31 @@ call    0 never executed
         -:  143:	  }
         -:  144:#endif
     #####:  145:	::operator delete(__p
+        -:  146:#if __cpp_sized_deallocation
+        -:  147:			  , __t * sizeof(_Tp)
+        -:  148:#endif
+        -:  149:			 );
+        -:  150:      }
+------------------
+_ZN9__gnu_cxx13new_allocatorI8TutorialE10deallocateEPS1_y:
+function _ZN9__gnu_cxx13new_allocatorI8TutorialE10deallocateEPS1_y called 0 returned 0% blocks executed 0%
+    #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
+    %%%%%:  132-block  0
+        -:  133:      {
+        -:  134:#if __cpp_aligned_new
+        -:  135:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+        -:  136:	  {
+        -:  137:	    ::operator delete(__p,
+        -:  138:# if __cpp_sized_deallocation
+        -:  139:			      __t * sizeof(_Tp),
+        -:  140:# endif
+        -:  141:			      std::align_val_t(alignof(_Tp)));
+        -:  142:	    return;
+        -:  143:	  }
+        -:  144:#endif
+    #####:  145:	::operator delete(__p
+    %%%%%:  145-block  0
+call    0 never executed
         -:  146:#if __cpp_sized_deallocation
         -:  147:			  , __t * sizeof(_Tp)
         -:  148:#endif

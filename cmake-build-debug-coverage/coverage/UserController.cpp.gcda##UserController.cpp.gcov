@@ -35,49 +35,14 @@ call    0 never executed
         -:   19:
 function _ZN14UserController23getTutorialsByPresenterERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
     #####:   20:Repository<struct Tutorial> UserController::getTutorialsByPresenter(string &presenter) {
-    #####:   21:    Repository<Tutorial> aux{};
-    %%%%%:   21-block  0
-call    0 never executed
-    #####:   22:    for(int i = 0; i < this->database.getSize();i++)
-    %%%%%:   22-block  0
-    %%%%%:   22-block  1
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   23:        if(database[i].getPresenter() == presenter)
-    %%%%%:   23-block  0
-call    0 never executed
-call    1 never executed
-branch  2 never executed
-branch  3 never executed
-    %%%%%:   23-block  1
-call    4 never executed
-call    5 never executed
-branch  6 never executed
-branch  7 never executed
-    #####:   24:            aux.add(this->database[i]);
-    %%%%%:   24-block  0
-call    0 never executed
-call    1 never executed
-branch  2 never executed
-branch  3 never executed
-    %%%%%:   24-block  1
-call    4 never executed
-branch  5 never executed
-branch  6 never executed
-    %%%%%:   24-block  2
-call    7 never executed
-    $$$$$:   24-block  3
-call    8 never executed
-    $$$$$:   24-block  4
+        -:   21:/*    Repository<Tutorial> aux{};
+        -:   22:    for(int i = 0; i < this->database.getSize();i++)
+        -:   23:        if(database[i].getPresenter() == presenter)
+        -:   24:            aux.add(this->database[i]);
         -:   25:
         -:   26:
-    #####:   27:    return aux;
-    %%%%%:   27-block  0
-    %%%%%:   27-block  1
-    =====:   28:}
-    $$$$$:   28-block  0
-call    0 never executed
+        -:   27:    return aux;*/
+    #####:   28:}
         -:   29:
 function _ZN14UserController17printTutorialListEv called 0 returned 0% blocks executed 0%
     #####:   30:void UserController::printTutorialList() {

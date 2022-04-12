@@ -164,6 +164,31 @@ call    0 never executed
         -:  149:			 );
         -:  150:      }
 ------------------
+_ZN9__gnu_cxx13new_allocatorI8TutorialE10deallocateEPS1_y:
+function _ZN9__gnu_cxx13new_allocatorI8TutorialE10deallocateEPS1_y called 0 returned 0% blocks executed 0%
+    #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
+    %%%%%:  132-block  0
+        -:  133:      {
+        -:  134:#if __cpp_aligned_new
+        -:  135:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+        -:  136:	  {
+        -:  137:	    ::operator delete(__p,
+        -:  138:# if __cpp_sized_deallocation
+        -:  139:			      __t * sizeof(_Tp),
+        -:  140:# endif
+        -:  141:			      std::align_val_t(alignof(_Tp)));
+        -:  142:	    return;
+        -:  143:	  }
+        -:  144:#endif
+    #####:  145:	::operator delete(__p
+    %%%%%:  145-block  0
+call    0 never executed
+        -:  146:#if __cpp_sized_deallocation
+        -:  147:			  , __t * sizeof(_Tp)
+        -:  148:#endif
+        -:  149:			 );
+        -:  150:      }
+------------------
 _ZN9__gnu_cxx13new_allocatorISt10_List_nodeI8TutorialEE10deallocateEPS3_y:
 function _ZN9__gnu_cxx13new_allocatorISt10_List_nodeI8TutorialEE10deallocateEPS3_y called 0 returned 0% blocks executed 0%
     #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))

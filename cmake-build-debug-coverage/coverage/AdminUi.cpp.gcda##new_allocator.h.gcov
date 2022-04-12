@@ -84,7 +84,8 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
     #####:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
         -:   80:
         -:   81:      _GLIBCXX20_CONSTEXPR
-        -:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_ called 0 returned 0% blocks executed 0%
+    #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
         -:   83:
         -:   84:      template<typename _Tp1>
         -:   85:	_GLIBCXX20_CONSTEXPR
@@ -105,7 +106,8 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
         -:  100:      // NB: __n is permitted to be 0.  The C++ standard says nothing
         -:  101:      // about what the return value is when __n == 0.
         -:  102:      _GLIBCXX_NODISCARD _Tp*
-        -:  103:      allocate(size_type __n, const void* = static_cast<const void*>(0))
+function _ZN9__gnu_cxx13new_allocatorIcE8allocateEyPKv called 0 returned 0% blocks executed 0%
+    #####:  103:      allocate(size_type __n, const void* = static_cast<const void*>(0))
         -:  104:      {
         -:  105:#if __cplusplus >= 201103L
         -:  106:	 // _GLIBCXX_RESOLVE_LIB_DEFECTS
@@ -113,13 +115,19 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
         -:  108:	 static_assert(sizeof(_Tp) != 0, "cannot allocate incomplete types");
         -:  109:#endif
         -:  110:
-        -:  111:	if (__builtin_expect(__n > this->_M_max_size(), false))
+    #####:  111:	if (__builtin_expect(__n > this->_M_max_size(), false))
+    %%%%%:  111-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
         -:  112:	  {
         -:  113:	    // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  114:	    // 3190. allocator::allocate sometimes returns too little storage
         -:  115:	    if (__n > (std::size_t(-1) / sizeof(_Tp)))
         -:  116:	      std::__throw_bad_array_new_length();
-        -:  117:	    std::__throw_bad_alloc();
+    #####:  117:	    std::__throw_bad_alloc();
+    %%%%%:  117-block  0
+call    0 never executed
         -:  118:	  }
         -:  119:
         -:  120:#if __cpp_aligned_new
@@ -129,7 +137,9 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
         -:  124:	    return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp), __al));
         -:  125:	  }
         -:  126:#endif
-        -:  127:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
+    #####:  127:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
+    %%%%%:  127-block  0
+call    0 never executed
         -:  128:      }
         -:  129:
         -:  130:      // __p is not permitted to be a null pointer.
@@ -203,10 +213,12 @@ call    0 never executed
         -:  194:
         -:  195:    private:
         -:  196:      _GLIBCXX_CONSTEXPR size_type
-        -:  197:      _M_max_size() const _GLIBCXX_USE_NOEXCEPT
+function _ZNK9__gnu_cxx13new_allocatorIcE11_M_max_sizeEv called 0 returned 0% blocks executed 0%
+    #####:  197:      _M_max_size() const _GLIBCXX_USE_NOEXCEPT
         -:  198:      {
         -:  199:#if __PTRDIFF_MAX__ < __SIZE_MAX__
-        -:  200:	return std::size_t(__PTRDIFF_MAX__) / sizeof(_Tp);
+    #####:  200:	return std::size_t(__PTRDIFF_MAX__) / sizeof(_Tp);
+    %%%%%:  200-block  0
         -:  201:#else
         -:  202:	return std::size_t(-1) / sizeof(_Tp);
         -:  203:#endif

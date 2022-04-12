@@ -107,10 +107,8 @@
         -:  103:      { __c1 = __c2; }
         -:  104:
         -:  105:      static _GLIBCXX_CONSTEXPR bool
-function _ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_ called 0 returned 0% blocks executed 0%
-    #####:  106:      eq(const char_type& __c1, const char_type& __c2)
-    #####:  107:      { return __c1 == __c2; }
-    %%%%%:  107-block  0
+        -:  106:      eq(const char_type& __c1, const char_type& __c2)
+        -:  107:      { return __c1 == __c2; }
         -:  108:
         -:  109:      static _GLIBCXX_CONSTEXPR bool
         -:  110:      lt(const char_type& __c1, const char_type& __c2)
@@ -170,21 +168,13 @@ function _ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_ called 0 returned 0% blocks exe
         -:  164:
         -:  165:  template<typename _CharT>
         -:  166:    _GLIBCXX14_CONSTEXPR std::size_t
-function _ZN9__gnu_cxx11char_traitsIcE6lengthEPKc called 0 returned 0% blocks executed 0%
-    #####:  167:    char_traits<_CharT>::
+        -:  167:    char_traits<_CharT>::
         -:  168:    length(const char_type* __p)
         -:  169:    {
-    #####:  170:      std::size_t __i = 0;
-    #####:  171:      while (!eq(__p[__i], char_type()))
-    %%%%%:  171-block  0
-    %%%%%:  171-block  1
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  172:        ++__i;
-    %%%%%:  172-block  0
-    #####:  173:      return __i;
-    %%%%%:  173-block  0
+        -:  170:      std::size_t __i = 0;
+        -:  171:      while (!eq(__p[__i], char_type()))
+        -:  172:        ++__i;
+        -:  173:      return __i;
         -:  174:    }
         -:  175:
         -:  176:  template<typename _CharT>
@@ -276,7 +266,7 @@ call    0 never executed
         -:  259:#ifdef _GLIBCXX_HAVE_BUILTIN_IS_CONSTANT_EVALUATED
         -:  260:      (void) __s;
         -:  261:      // In constexpr contexts all strings should be constant.
-    #####:  262:      return __builtin_is_constant_evaluated();
+        -:  262:      return __builtin_is_constant_evaluated();
         -:  263:#else
         -:  264:      while (__builtin_constant_p(*__s) && *__s)
         -:  265:	__s++;
@@ -380,21 +370,13 @@ function _ZNSt11char_traitsIcE6assignERcRKc called 0 returned 0% blocks executed
         -:  362:      }
         -:  363:
         -:  364:      static _GLIBCXX17_CONSTEXPR size_t
-function _ZNSt11char_traitsIcE6lengthEPKc called 0 returned 0% blocks executed 0%
-    #####:  365:      length(const char_type* __s)
-    %%%%%:  365-block  0
+        -:  365:      length(const char_type* __s)
         -:  366:      {
         -:  367:#if __cplusplus >= 201703L
-    #####:  368:	if (__constant_string_p(__s))
-    %%%%%:  368-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  369:	  return __gnu_cxx::char_traits<char_type>::length(__s);
-    %%%%%:  369-block  0
-call    0 never executed
+        -:  368:	if (__constant_string_p(__s))
+        -:  369:	  return __gnu_cxx::char_traits<char_type>::length(__s);
         -:  370:#endif
-    #####:  371:	return __builtin_strlen(__s);
-    %%%%%:  371-block  0
+        -:  371:	return __builtin_strlen(__s);
         -:  372:      }
         -:  373:
         -:  374:      static _GLIBCXX17_CONSTEXPR const char_type*

@@ -4,82 +4,112 @@
         -:    0:Runs:1
         -:    1:#include "Header/View/AdminUi.h"
         -:    2:#include "Header/View/UserUi.h"
-        -:    3:
-function main called 1 returned 100% blocks executed 74%
-        1:    4:int main() {
-        1:    5:    Repository<Tutorial> AdminAccountRepository{};
-        1:    5-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:    6:    AdminController AdminAccountController{AdminAccountRepository};
+        -:    3:#include "D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\Header\Exception\Test.h"
+        -:    4:
+function main called 1 returned 100% blocks executed 59%
+        1:    5:int main() {
+        1:    6:    cout << "Starting Tests: \n";
         1:    6-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:    7:    AdminUi AdminAccount{AdminAccountController};
+        1:    7:    TestTutorial();
         1:    7-block  0
 call    0 returned 1
-        -:    8:
-        1:    9:    Repository<Tutorial> UserAccountRepository{};
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    8:    cout << "Test Done \n";
+        1:    8-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   10:    UserController UserAccountController{AdminAccountRepository, UserAccountRepository};
-        1:   10-block  0
+        2:    9:    Repository<Tutorial> AdminAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\data.txt"};
+        1:    9-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    9-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:    9-block  2
+    $$$$$:    9-block  3
+        1:   10:    AdminController AdminAccountController{AdminAccountRepository};
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   11:    UserUi UserAccount{UserAccountController};
+        1:   11:    AdminUi AdminAccount{AdminAccountController};
         1:   11-block  0
 call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
         -:   12:
-        -:   13:
-        -:   14:
-        -:   15:    int type;
-        -:   16:    while(true) {
-       1*:   17:        cout << "For Admin press 1 \nFor User press 2. \n";
-        1:   17-block  0
+        2:   13:    Repository<Tutorial> UserAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\watchListData.txt"};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   13-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:   13-block  1
+    $$$$$:   13-block  2
+        1:   14:    UserController UserAccountController{AdminAccountRepository, UserAccountRepository};
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    %%%%%:   17-block  1
-        1:   18:        cin >> type;
-        1:   18-block  0
+        1:   15:    UserUi UserAccount{UserAccountController};
+        1:   15-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   19:        if (type == 1)
-        1:   19-block  0
-branch  0 taken 1 (fallthrough)
-branch  1 taken 0
-        1:   20:            AdminAccount.menu();
-        1:   20-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   21:        if (type == 2)
+        -:   16:
+        -:   17:
+        -:   18:
+        -:   19:    int type;
+        -:   20:    while(true) {
+       1*:   21:        cout << "For Admin press 1 \nFor User press 2. \n";
         1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    %%%%%:   21-block  1
+        1:   22:        cin >> type;
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23:        if (type == 1)
+        1:   23-block  0
 branch  0 taken 0 (fallthrough)
 branch  1 taken 1
-    #####:   22:            UserAccount.menu();
-    %%%%%:   22-block  0
+    #####:   24:            AdminAccount.menu();
+    %%%%%:   24-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:   23:        else
-        1:   24:            break;
-        1:   24-block  0
-        -:   25:    }
-        -:   26:
-        1:   27:    return 0;
-        1:   28:}
+        1:   25:        if (type == 2)
+        1:   25-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   26:            UserAccount.menu();
+    %%%%%:   26-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   27:        else
+        1:   28:            break;
         1:   28-block  0
+        -:   29:    }
+        -:   30:
+        1:   31:    return 0;
+        1:   32:}
+        1:   32-block  0
 call    0 returned 1
 call    1 returned 1
-    $$$$$:   28-block  1
+    $$$$$:   32-block  1
 call    2 never executed
-    $$$$$:   28-block  2
+    $$$$$:   32-block  2
 call    3 never executed

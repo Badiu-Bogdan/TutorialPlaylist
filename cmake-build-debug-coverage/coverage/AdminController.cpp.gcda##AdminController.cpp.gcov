@@ -10,936 +10,177 @@
         -:    6:
 function _ZN15AdminControllerC2ER10RepositoryI8TutorialE called 1 returned 100% blocks executed 100%
         1:    7:AdminController::AdminController(Repository<Tutorial> &repository) : repo(repository) {
-        1:    8:    setUpElements();
-        1:    8-block  0
-call    0 returned 1
-        1:    9:}
-        -:   10:
+        1:    8:}
+        -:    9:
 function _ZN15AdminController11addTutorialER8Tutorial called 0 returned 0% blocks executed 0%
-    #####:   11:int AdminController::addTutorial(Tutorial &new_tutorial) {
-    #####:   12:    repo.add(new_tutorial);
-    %%%%%:   12-block  0
+    #####:   10:int AdminController::addTutorial(Tutorial &new_tutorial) {
+    #####:   11:    repo.add(new_tutorial);
+    %%%%%:   11-block  0
 call    0 never executed
 call    1 never executed
 branch  2 never executed
 branch  3 never executed
-    %%%%%:   12-block  1
+    %%%%%:   11-block  1
 call    4 never executed
-    $$$$$:   12-block  2
+    $$$$$:   11-block  2
 call    5 never executed
-    #####:   13:    return 0;
-    %%%%%:   13-block  0
-        -:   14:}
-        -:   15:
-function _ZN15AdminController13setUpElementsEv called 1 returned 100% blocks executed 40%
-        1:   16:void AdminController::setUpElements() {
-        1:   17:    repo.add(Tutorial{"video1", "presenter1", 10, 11, "link1"});
-        1:   17-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   17-block  1
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   17-block  2
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   17-block  3
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   17-block  4
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   17-block  5
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   17-block  6
-call   25 never executed
-    $$$$$:   17-block  7
-    $$$$$:   17-block  8
-call   26 never executed
-    $$$$$:   17-block  9
-    $$$$$:   17-block 10
-call   27 never executed
-    $$$$$:   17-block 11
-    $$$$$:   17-block 12
-    $$$$$:   17-block 13
-    $$$$$:   17-block 14
-call   28 never executed
-    $$$$$:   17-block 15
-    $$$$$:   17-block 16
-call   29 never executed
-    $$$$$:   17-block 17
-    $$$$$:   17-block 18
-call   30 never executed
-    $$$$$:   17-block 19
-    $$$$$:   17-block 20
-call   31 never executed
-    $$$$$:   17-block 21
-call   32 never executed
-        1:   18:    repo.add(Tutorial{"video2", "presenter2", 20, 22, "link2"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   18-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   18-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   18-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   18-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   18-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   18-block  5
-call   25 never executed
-    $$$$$:   18-block  6
-    $$$$$:   18-block  7
-call   26 never executed
-    $$$$$:   18-block  8
-    $$$$$:   18-block  9
-call   27 never executed
-    $$$$$:   18-block 10
-    $$$$$:   18-block 11
-    $$$$$:   18-block 12
-    $$$$$:   18-block 13
-call   28 never executed
-    $$$$$:   18-block 14
-    $$$$$:   18-block 15
-call   29 never executed
-    $$$$$:   18-block 16
-    $$$$$:   18-block 17
-call   30 never executed
-    $$$$$:   18-block 18
-    $$$$$:   18-block 19
-call   31 never executed
-    $$$$$:   18-block 20
-call   32 never executed
-        1:   19:    repo.add(Tutorial{"video3", "presenter3", 30, 33, "link3"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   19-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   19-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   19-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   19-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   19-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   19-block  5
-call   25 never executed
-    $$$$$:   19-block  6
-    $$$$$:   19-block  7
-call   26 never executed
-    $$$$$:   19-block  8
-    $$$$$:   19-block  9
-call   27 never executed
-    $$$$$:   19-block 10
-    $$$$$:   19-block 11
-    $$$$$:   19-block 12
-    $$$$$:   19-block 13
-call   28 never executed
-    $$$$$:   19-block 14
-    $$$$$:   19-block 15
-call   29 never executed
-    $$$$$:   19-block 16
-    $$$$$:   19-block 17
-call   30 never executed
-    $$$$$:   19-block 18
-    $$$$$:   19-block 19
-call   31 never executed
-    $$$$$:   19-block 20
-call   32 never executed
-        1:   20:    repo.add(Tutorial{"video4", "presenter4", 40, 44, "link4"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   20-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   20-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   20-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   20-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   20-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   20-block  5
-call   25 never executed
-    $$$$$:   20-block  6
-    $$$$$:   20-block  7
-call   26 never executed
-    $$$$$:   20-block  8
-    $$$$$:   20-block  9
-call   27 never executed
-    $$$$$:   20-block 10
-    $$$$$:   20-block 11
-    $$$$$:   20-block 12
-    $$$$$:   20-block 13
-call   28 never executed
-    $$$$$:   20-block 14
-    $$$$$:   20-block 15
-call   29 never executed
-    $$$$$:   20-block 16
-    $$$$$:   20-block 17
-call   30 never executed
-    $$$$$:   20-block 18
-    $$$$$:   20-block 19
-call   31 never executed
-    $$$$$:   20-block 20
-call   32 never executed
-        1:   21:    repo.add(Tutorial{"video5", "presenter5", 50, 55, "link5"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   21-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   21-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   21-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   21-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   21-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   21-block  5
-call   25 never executed
-    $$$$$:   21-block  6
-    $$$$$:   21-block  7
-call   26 never executed
-    $$$$$:   21-block  8
-    $$$$$:   21-block  9
-call   27 never executed
-    $$$$$:   21-block 10
-    $$$$$:   21-block 11
-    $$$$$:   21-block 12
-    $$$$$:   21-block 13
-call   28 never executed
-    $$$$$:   21-block 14
-    $$$$$:   21-block 15
-call   29 never executed
-    $$$$$:   21-block 16
-    $$$$$:   21-block 17
-call   30 never executed
-    $$$$$:   21-block 18
-    $$$$$:   21-block 19
-call   31 never executed
-    $$$$$:   21-block 20
-call   32 never executed
-        1:   22:    repo.add(Tutorial{"video6", "presenter6", 60, 66, "link6"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   22-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   22-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   22-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   22-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   22-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   22-block  5
-call   25 never executed
-    $$$$$:   22-block  6
-    $$$$$:   22-block  7
-call   26 never executed
-    $$$$$:   22-block  8
-    $$$$$:   22-block  9
-call   27 never executed
-    $$$$$:   22-block 10
-    $$$$$:   22-block 11
-    $$$$$:   22-block 12
-    $$$$$:   22-block 13
-call   28 never executed
-    $$$$$:   22-block 14
-    $$$$$:   22-block 15
-call   29 never executed
-    $$$$$:   22-block 16
-    $$$$$:   22-block 17
-call   30 never executed
-    $$$$$:   22-block 18
-    $$$$$:   22-block 19
-call   31 never executed
-    $$$$$:   22-block 20
-call   32 never executed
-        1:   23:    repo.add(Tutorial{"video7", "presenter7", 70, 77, "link7"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   23-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   23-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   23-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   23-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   23-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   23-block  5
-call   25 never executed
-    $$$$$:   23-block  6
-    $$$$$:   23-block  7
-call   26 never executed
-    $$$$$:   23-block  8
-    $$$$$:   23-block  9
-call   27 never executed
-    $$$$$:   23-block 10
-    $$$$$:   23-block 11
-    $$$$$:   23-block 12
-    $$$$$:   23-block 13
-call   28 never executed
-    $$$$$:   23-block 14
-    $$$$$:   23-block 15
-call   29 never executed
-    $$$$$:   23-block 16
-    $$$$$:   23-block 17
-call   30 never executed
-    $$$$$:   23-block 18
-    $$$$$:   23-block 19
-call   31 never executed
-    $$$$$:   23-block 20
-call   32 never executed
-        1:   24:    repo.add(Tutorial{"video8", "presenter8", 80, 88, "link8"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   24-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   24-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   24-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   24-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   24-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   24-block  5
-call   25 never executed
-    $$$$$:   24-block  6
-    $$$$$:   24-block  7
-call   26 never executed
-    $$$$$:   24-block  8
-    $$$$$:   24-block  9
-call   27 never executed
-    $$$$$:   24-block 10
-    $$$$$:   24-block 11
-    $$$$$:   24-block 12
-    $$$$$:   24-block 13
-call   28 never executed
-    $$$$$:   24-block 14
-    $$$$$:   24-block 15
-call   29 never executed
-    $$$$$:   24-block 16
-    $$$$$:   24-block 17
-call   30 never executed
-    $$$$$:   24-block 18
-    $$$$$:   24-block 19
-call   31 never executed
-    $$$$$:   24-block 20
-call   32 never executed
-        1:   25:    repo.add(Tutorial{"video9", "presenter9", 90, 99, "link9"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   25-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   25-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   25-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   25-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   25-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   25-block  5
-call   25 never executed
-    $$$$$:   25-block  6
-    $$$$$:   25-block  7
-call   26 never executed
-    $$$$$:   25-block  8
-    $$$$$:   25-block  9
-call   27 never executed
-    $$$$$:   25-block 10
-    $$$$$:   25-block 11
-    $$$$$:   25-block 12
-    $$$$$:   25-block 13
-call   28 never executed
-    $$$$$:   25-block 14
-    $$$$$:   25-block 15
-call   29 never executed
-    $$$$$:   25-block 16
-    $$$$$:   25-block 17
-call   30 never executed
-    $$$$$:   25-block 18
-    $$$$$:   25-block 19
-call   31 never executed
-    $$$$$:   25-block 20
-call   32 never executed
-        1:   26:    repo.add(Tutorial{"video10", "presenter10", 55, 55, "link10"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   26-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   26-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   26-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   26-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   26-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   26-block  5
-call   25 never executed
-    $$$$$:   26-block  6
-    $$$$$:   26-block  7
-call   26 never executed
-    $$$$$:   26-block  8
-    $$$$$:   26-block  9
-call   27 never executed
-    $$$$$:   26-block 10
-    $$$$$:   26-block 11
-    $$$$$:   26-block 12
-    $$$$$:   26-block 13
-call   28 never executed
-    $$$$$:   26-block 14
-    $$$$$:   26-block 15
-call   29 never executed
-    $$$$$:   26-block 16
-    $$$$$:   26-block 17
-call   30 never executed
-    $$$$$:   26-block 18
-    $$$$$:   26-block 19
-call   31 never executed
-    $$$$$:   26-block 20
-call   32 never executed
-        1:   27:    repo.add(Tutorial{"video11", "presenter1", 12, 21, "link1"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   27-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   27-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   27-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   27-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   27-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   27-block  5
-call   25 never executed
-    $$$$$:   27-block  6
-    $$$$$:   27-block  7
-call   26 never executed
-    $$$$$:   27-block  8
-    $$$$$:   27-block  9
-call   27 never executed
-    $$$$$:   27-block 10
-    $$$$$:   27-block 11
-    $$$$$:   27-block 12
-    $$$$$:   27-block 13
-call   28 never executed
-    $$$$$:   27-block 14
-    $$$$$:   27-block 15
-call   29 never executed
-    $$$$$:   27-block 16
-    $$$$$:   27-block 17
-call   30 never executed
-    $$$$$:   27-block 18
-    $$$$$:   27-block 19
-call   31 never executed
-    $$$$$:   27-block 20
-call   32 never executed
-        1:   28:    repo.add(Tutorial{"video12", "presenter1", 23, 32, "link1"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   28-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   28-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   28-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   28-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   28-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   28-block  5
-call   25 never executed
-    $$$$$:   28-block  6
-    $$$$$:   28-block  7
-call   26 never executed
-    $$$$$:   28-block  8
-    $$$$$:   28-block  9
-call   27 never executed
-    $$$$$:   28-block 10
-    $$$$$:   28-block 11
-    $$$$$:   28-block 12
-    $$$$$:   28-block 13
-call   28 never executed
-    $$$$$:   28-block 14
-    $$$$$:   28-block 15
-call   29 never executed
-    $$$$$:   28-block 16
-    $$$$$:   28-block 17
-call   30 never executed
-    $$$$$:   28-block 18
-    $$$$$:   28-block 19
-call   31 never executed
-    $$$$$:   28-block 20
-call   32 never executed
-        1:   29:    repo.add(Tutorial{"video13", "presenter1", 34, 43, "link1"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   29-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   29-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   29-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   29-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   29-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   29-block  5
-call   25 never executed
-    $$$$$:   29-block  6
-    $$$$$:   29-block  7
-call   26 never executed
-    $$$$$:   29-block  8
-    $$$$$:   29-block  9
-call   27 never executed
-    $$$$$:   29-block 10
-    $$$$$:   29-block 11
-    $$$$$:   29-block 12
-    $$$$$:   29-block 13
-call   28 never executed
-    $$$$$:   29-block 14
-    $$$$$:   29-block 15
-call   29 never executed
-    $$$$$:   29-block 16
-    $$$$$:   29-block 17
-call   30 never executed
-    $$$$$:   29-block 18
-    $$$$$:   29-block 19
-call   31 never executed
-    $$$$$:   29-block 20
-call   32 never executed
-        1:   30:    repo.add(Tutorial{"video14", "presenter1", 45, 54, "link1"});
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   30-block  0
-call    4 returned 1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   30-block  1
-call    8 returned 1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   30-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   30-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   30-block  4
-call   18 returned 1
-call   19 returned 1
-call   20 returned 1
-call   21 returned 1
-call   22 returned 1
-call   23 returned 1
-call   24 returned 1
-    $$$$$:   30-block  5
-call   25 never executed
-    $$$$$:   30-block  6
-    $$$$$:   30-block  7
-call   26 never executed
-    $$$$$:   30-block  8
-    $$$$$:   30-block  9
-call   27 never executed
-    $$$$$:   30-block 10
-    $$$$$:   30-block 11
-    $$$$$:   30-block 12
-    $$$$$:   30-block 13
-call   28 never executed
-    $$$$$:   30-block 14
-    $$$$$:   30-block 15
-call   29 never executed
-    $$$$$:   30-block 16
-    $$$$$:   30-block 17
-call   30 never executed
-    $$$$$:   30-block 18
-    $$$$$:   30-block 19
-call   31 never executed
-        1:   31:}
-        -:   32:
+    #####:   12:    return 0;
+    %%%%%:   12-block  0
+        -:   13:}
+        -:   14:
+        -:   15:/*void AdminController::setUpElements() {
+        -:   16:    repo.add(Tutorial{"video1", "presenter1", 10, 11, "link1"});
+        -:   17:    repo.add(Tutorial{"video2", "presenter2", 20, 22, "link2"});
+        -:   18:    repo.add(Tutorial{"video3", "presenter3", 30, 33, "link3"});
+        -:   19:    repo.add(Tutorial{"video4", "presenter4", 40, 44, "link4"});
+        -:   20:    repo.add(Tutorial{"video5", "presenter5", 50, 55, "link5"});
+        -:   21:    repo.add(Tutorial{"video6", "presenter6", 60, 66, "link6"});
+        -:   22:    repo.add(Tutorial{"video7", "presenter7", 70, 77, "link7"});
+        -:   23:    repo.add(Tutorial{"video8", "presenter8", 80, 88, "link8"});
+        -:   24:    repo.add(Tutorial{"video9", "presenter9", 90, 99, "link9"});
+        -:   25:    repo.add(Tutorial{"video10", "presenter10", 55, 55, "link10"});
+        -:   26:    repo.add(Tutorial{"video11", "presenter1", 12, 21, "link1"});
+        -:   27:    repo.add(Tutorial{"video12", "presenter1", 23, 32, "link1"});
+        -:   28:    repo.add(Tutorial{"video13", "presenter1", 34, 43, "link1"});
+        -:   29:    repo.add(Tutorial{"video14", "presenter1", 45, 54, "link1"});
+        -:   30:}*/
+        -:   31:
 function _ZN15AdminController8printAllEv called 0 returned 0% blocks executed 0%
-    #####:   33:void AdminController::printAll() {
-    #####:   34:    for(int i = 0;i < repo.getSize();i++)
-    %%%%%:   34-block  0
-    %%%%%:   34-block  1
+    #####:   32:void AdminController::printAll() {
+    #####:   33:    for(int i = 0;i < repo.getSize();i++)
+    %%%%%:   33-block  0
+    %%%%%:   33-block  1
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   35:        cout << "id:" << i << ", " << repo[i];
-    %%%%%:   35-block  0
+    #####:   34:        cout << "id:" << i << ", " << repo[i];
+    %%%%%:   34-block  0
 call    0 never executed
 call    1 never executed
 call    2 never executed
 call    3 never executed
 call    4 never executed
-    #####:   36:}
-        -:   37:
+    #####:   35:}
+        -:   36:
 function _ZN15AdminController14deleteTutorialERi called 0 returned 0% blocks executed 0%
-    #####:   38:int AdminController::deleteTutorial(int &id) {
-    #####:   39:    repo.removeElement(id);
-    %%%%%:   39-block  0
+    #####:   37:int AdminController::deleteTutorial(int &id) {
+    #####:   38:    repo.removeElement(id);
+    %%%%%:   38-block  0
 call    0 never executed
-    #####:   40:    return 0;
-        -:   41:}
-        -:   42:
+    #####:   39:    return 0;
+        -:   40:}
+        -:   41:
 function _ZN15AdminController14updateTutorialERiR8Tutorial called 0 returned 0% blocks executed 0%
-    #####:   43:int AdminController::updateTutorial(int &id, Tutorial &new_tutorial) {
-    #####:   44:    Tutorial existent = repo[id];
-    %%%%%:   44-block  0
+    #####:   42:int AdminController::updateTutorial(int &id, Tutorial &new_tutorial) {
+    #####:   43:    Tutorial existent = repo[id];
+    %%%%%:   43-block  0
 call    0 never executed
 call    1 never executed
 branch  2 never executed
 branch  3 never executed
-    #####:   45:    if(!new_tutorial.getTitle().empty())
+    #####:   44:    if(!new_tutorial.getTitle().empty())
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   44-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   45:        existent.setTitle(new_tutorial.getTitle());
     %%%%%:   45-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:   45-block  1
 call    3 never executed
-call    4 never executed
+branch  4 never executed
 branch  5 never executed
-branch  6 never executed
-    #####:   46:        existent.setTitle(new_tutorial.getTitle());
+    %%%%%:   45-block  2
+call    6 never executed
+    $$$$$:   45-block  3
+call    7 never executed
+    $$$$$:   45-block  4
+    #####:   46:    if(!new_tutorial.getPresenter().empty())
     %%%%%:   46-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:   46-block  1
 call    3 never executed
-branch  4 never executed
+call    4 never executed
 branch  5 never executed
-    %%%%%:   46-block  2
-call    6 never executed
-    $$$$$:   46-block  3
-call    7 never executed
-    $$$$$:   46-block  4
-    #####:   47:    if(!new_tutorial.getPresenter().empty())
+branch  6 never executed
+    #####:   47:        existent.setPresenter(new_tutorial.getPresenter());
     %%%%%:   47-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:   47-block  1
 call    3 never executed
-call    4 never executed
+branch  4 never executed
 branch  5 never executed
-branch  6 never executed
-    #####:   48:        existent.setPresenter(new_tutorial.getPresenter());
+    %%%%%:   47-block  2
+call    6 never executed
+    $$$$$:   47-block  3
+call    7 never executed
+    $$$$$:   47-block  4
+    #####:   48:    if(new_tutorial.getMinutes() > 0)
     %%%%%:   48-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:   48-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    %%%%%:   48-block  2
-call    6 never executed
-    $$$$$:   48-block  3
-call    7 never executed
-    $$$$$:   48-block  4
-    #####:   49:    if(new_tutorial.getMinutes() != 0)
+    #####:   49:        existent.setMinutes(new_tutorial.getMinutes());
     %%%%%:   49-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   50:        existent.setMinutes(new_tutorial.getMinutes());
-    %%%%%:   50-block  0
 call    0 never executed
 call    1 never executed
 branch  2 never executed
 branch  3 never executed
-    #####:   51:    if(new_tutorial.getSeconds() != 0)
-    %%%%%:   51-block  0
+    #####:   50:    if(new_tutorial.getSeconds() > 0)
+    %%%%%:   50-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   52:        existent.setSeconds(new_tutorial.getSeconds());
-    %%%%%:   52-block  0
+    #####:   51:        existent.setSeconds(new_tutorial.getSeconds());
+    %%%%%:   51-block  0
 call    0 never executed
 call    1 never executed
-    #####:   53:    if(!new_tutorial.getLink().empty())
+    #####:   52:    if(!new_tutorial.getLink().empty())
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   52-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   53:        existent.setLink(new_tutorial.getLink());
     %%%%%:   53-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:   53-block  1
 call    3 never executed
-call    4 never executed
-branch  5 never executed
-branch  6 never executed
-    #####:   54:        existent.setLink(new_tutorial.getLink());
-    %%%%%:   54-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   54-block  1
-call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    %%%%%:   54-block  2
+    %%%%%:   53-block  2
 call    6 never executed
-    $$$$$:   54-block  3
+    $$$$$:   53-block  3
 call    7 never executed
-    $$$$$:   54-block  4
-        -:   55:
-    #####:   56:    repo.updateElement(id, existent);
-    %%%%%:   56-block  0
+    $$$$$:   53-block  4
+        -:   54:
+    #####:   55:    repo.updateElement(id, existent);
+    %%%%%:   55-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:   57:
-    #####:   58:}
-    %%%%%:   58-block  0
+        -:   56:
+    #####:   57:}
+    %%%%%:   57-block  0
 call    0 never executed
-    $$$$$:   58-block  1
+    $$$$$:   57-block  1
 call    1 never executed
+        -:   58:
         -:   59:
-        -:   60:

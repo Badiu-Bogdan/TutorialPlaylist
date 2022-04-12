@@ -8,116 +8,269 @@
         -:    4:
         -:    5:#include "../../Header/Model/Tutorial.h"
         -:    6:
-function _ZN8TutorialC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_RKiS9_S7_ called 14 returned 100% blocks executed 62%
-       14:    7:Tutorial::Tutorial(const string &new_title, const string &new_presenter, const int &new_minutes, const int &new_seconds,
-       14:    8:                   const string &new_link)
-       14:    9:        : title(new_title), presenter(new_presenter), minutes(new_minutes), seconds(new_seconds), link(new_link),
-       14:    9-block  0
-call    0 returned 14
-call    1 returned 14
-branch  2 taken 14 (fallthrough)
+function _ZN8TutorialC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_RKiS9_S7_ called 5 returned 100% blocks executed 62%
+        5:    7:Tutorial::Tutorial(const string &new_title, const string &new_presenter, const int &new_minutes, const int &new_seconds,
+        5:    8:                   const string &new_link)
+        5:    9:        : title(new_title), presenter(new_presenter), minutes(new_minutes), seconds(new_seconds), link(new_link),
+        5:    9-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
 branch  3 taken 0 (throw)
-       14:   10:          likes(0) {
-       14:   10-block  0
-call    0 returned 14
-branch  1 taken 14 (fallthrough)
+        5:   10:          likes(0) {
+        5:   10-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
 branch  2 taken 0 (throw)
         -:   11:
-       14:   12:}
-       14:   12-block  0
+        5:   12:}
+        5:   12-block  0
     $$$$$:   12-block  1
 call    0 never executed
     $$$$$:   12-block  2
 call    1 never executed
         -:   13:
-function _ZN8Tutorial8setTitleENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
-    #####:   14:void Tutorial::setTitle(string new_title) {
-    #####:   15:    this->title = new_title;
-    %%%%%:   15-block  0
-call    0 never executed
-    #####:   16:}
+function _ZN8Tutorial8setTitleENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
+        3:   14:void Tutorial::setTitle(string new_title) {
+        3:   15:    this->title = new_title;
+        3:   15-block  0
+call    0 returned 3
+        3:   16:}
         -:   17:
-function _ZN8Tutorial12setPresenterENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
-    #####:   18:void Tutorial::setPresenter(string new_presenter) {
-    #####:   19:    presenter = new_presenter;
-    %%%%%:   19-block  0
-call    0 never executed
-    #####:   20:}
+function _ZN8Tutorial12setPresenterENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
+        3:   18:void Tutorial::setPresenter(string new_presenter) {
+        3:   19:    presenter = new_presenter;
+        3:   19-block  0
+call    0 returned 3
+        3:   20:}
         -:   21:
-function _ZN8Tutorial10setMinutesEi called 0 returned 0% blocks executed 0%
-    #####:   22:void Tutorial::setMinutes(int new_minutes) {
-    #####:   23:    minutes = new_minutes;
-    #####:   24:}
+function _ZN8Tutorial10setMinutesEi called 3 returned 100% blocks executed 100%
+        3:   22:void Tutorial::setMinutes(int new_minutes) {
+        3:   23:    minutes = new_minutes;
+        3:   24:}
         -:   25:
-function _ZlsRSoRK8Tutorial called 0 returned 0% blocks executed 0%
-    #####:   26:ostream &operator<<(ostream &os, const Tutorial &entity) {
-    #####:   27:    os << entity.title << ", " << entity.presenter << ", " << "min:" << entity.minutes << ", "
-    %%%%%:   27-block  0
-call    0 never executed
-call    1 never executed
-call    2 never executed
-call    3 never executed
-call    4 never executed
-    #####:   28:       << "sec:" << entity.seconds << ", " << entity.likes << ", " << entity.link << " \n";
-call    0 never executed
-call    1 never executed
-call    2 never executed
-call    3 never executed
-call    4 never executed
-call    5 never executed
-call    6 never executed
-call    7 never executed
-call    8 never executed
+function _ZlsRSoRK8Tutorial called 3 returned 100% blocks executed 100%
+        3:   26:ostream &operator<<(ostream &os, const Tutorial &entity) {
+        3:   27:    os << entity.title << "," << entity.presenter << "," << entity.minutes << "," << entity.seconds << ","
+        3:   27-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+call    4 returned 3
+call    5 returned 3
+call    6 returned 3
+call    7 returned 3
+        3:   28:       << entity.likes << "," << entity.link << " \n";
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
         -:   29:
-    #####:   30:    return os;
+        3:   30:    return os;
         -:   31:}
         -:   32:
-function _ZN8TutorialC2Ev called 40 returned 100% blocks executed 100%
-       40:   33:Tutorial::Tutorial() {
-       40:   33-block  0
-call    0 returned 40
-call    1 returned 40
-call    2 returned 40
+function _ZN8TutorialC2Ev called 17 returned 100% blocks executed 100%
+       17:   33:Tutorial::Tutorial() {
+       17:   33-block  0
+call    0 returned 17
+call    1 returned 17
+call    2 returned 17
         -:   34:
-       40:   35:}
+       17:   35:}
         -:   36:
-function _ZNK8TutorialeqERKS_ called 0 returned 0% blocks executed 0%
-    #####:   37:bool Tutorial::operator==(const Tutorial &entity) const {
-    #####:   38:    if(minutes != entity.minutes)
-    %%%%%:   38-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:   39:        return false;
-    %%%%%:   39-block  0
-    #####:   40:    if(seconds != entity.seconds)
-    %%%%%:   40-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:   41:        return false;
-    %%%%%:   41-block  0
-    #####:   42:    if(title != entity.title)
-    %%%%%:   42-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   43:        return false;
-    %%%%%:   43-block  0
-    #####:   44:    if(presenter != entity.presenter)
-    %%%%%:   44-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   45:        return false;
-    %%%%%:   45-block  0
-    #####:   46:    if(link != entity.link)
-    %%%%%:   46-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   47:        return false;
-    %%%%%:   47-block  0
-    #####:   48:    return true;
-    %%%%%:   48-block  0
-        -:   49:}
-        -:   50:
-        -:   51:
+function _ZNK8TutorialeqERKS_ called 8 returned 100% blocks executed 100%
+        8:   37:bool Tutorial::operator==(const Tutorial &entity) const {
+        8:   38:    if (minutes != entity.minutes)
+        8:   38-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 7
+        1:   39:        return false;
+        1:   39-block  0
+        7:   40:    if (seconds != entity.seconds)
+        7:   40-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 6
+        1:   41:        return false;
+        1:   41-block  0
+        6:   42:    if (title != entity.title)
+        6:   42-block  0
+call    0 returned 6
+branch  1 taken 1 (fallthrough)
+branch  2 taken 5
+        1:   43:        return false;
+        1:   43-block  0
+        5:   44:    if (presenter != entity.presenter)
+        5:   44-block  0
+call    0 returned 5
+branch  1 taken 1 (fallthrough)
+branch  2 taken 4
+        1:   45:        return false;
+        1:   45-block  0
+        4:   46:    if (link != entity.link)
+        4:   46-block  0
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:   47:        return false;
+        1:   47-block  0
+        3:   48:    if (likes != entity.likes)
+        3:   48-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   49:        return false;
+        1:   49-block  0
+        2:   50:    return true;
+        2:   50-block  0
+        -:   51:}
+        -:   52:
+function _ZrsRSiR8Tutorial called 17 returned 100% blocks executed 70%
+       17:   53:istream &operator>>(istream &is, Tutorial &entity) {
+       17:   54:    string line;
+       17:   54-block  0
+call    0 returned 17
+       17:   55:    is >> line;
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:   56:    stringstream ss(line);
+       17:   56-block  0
+call    0 returned 17
+call    1 returned 17
+branch  2 taken 17 (fallthrough)
+branch  3 taken 0 (throw)
+       17:   57:    string title, presenter, minutes, seconds, likes, link;
+       17:   57-block  0
+call    0 returned 17
+call    1 returned 17
+call    2 returned 17
+call    3 returned 17
+call    4 returned 17
+call    5 returned 17
+       17:   58:    getline(ss, title, ',');
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:   59:    getline(ss, presenter, ',');
+       17:   59-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:   60:    getline(ss, minutes, ',');
+       17:   60-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:   61:    getline(ss, seconds, ',');
+       17:   61-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:   62:    getline(ss, likes, ',');
+       17:   62-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:   63:    getline(ss, link, ',');
+       17:   63-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   64:
+       17:   65:    entity.title = title;
+       17:   65-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:   66:    entity.presenter = presenter;
+       17:   66-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   67:    try {
+       17:   68:        entity.minutes = stoi(minutes);
+       17:   68-block  0
+call    0 returned 17
+branch  1 taken 15 (fallthrough)
+branch  2 taken 2 (throw)
+       15:   68-block  1
+        -:   69:    }
+        2:   70:    catch (std::invalid_argument &error) {
+        2:   70-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+        2:   70-block  1
+call    2 returned 2
+        2:   71:        entity.minutes = 0;
+        2:   72:    }
+call    0 returned 2
+        -:   73:    try {
+       17:   74:        entity.seconds = stoi(seconds);
+       17:   74-block  0
+call    0 returned 17
+branch  1 taken 15 (fallthrough)
+branch  2 taken 2 (throw)
+       15:   74-block  1
+        -:   75:    }
+        2:   76:    catch (std::invalid_argument &error) {
+        2:   76-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+        2:   76-block  1
+call    2 returned 2
+        2:   77:        entity.seconds = 0;
+        2:   78:    }
+call    0 returned 2
+        -:   79:    try {
+       17:   80:        entity.likes = stoi(likes);
+       17:   80-block  0
+call    0 returned 17
+branch  1 taken 15 (fallthrough)
+branch  2 taken 2 (throw)
+       15:   80-block  1
+        -:   81:    }
+        2:   82:    catch (std::invalid_argument &error) {
+        2:   82-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+        2:   82-block  1
+call    2 returned 2
+        2:   83:        entity.likes = 0;
+        2:   84:    }
+call    0 returned 2
+       17:   85:    entity.link = link;
+       17:   85-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   86:
+       17:   87:    return is;
+       17:   87-block  0
+       17:   88:}
+       17:   88-block  0
+call    0 returned 17
+call    1 returned 17
+call    2 returned 17
+call    3 returned 17
+call    4 returned 17
+call    5 returned 17
+call    6 returned 17
+call    7 returned 17
+    $$$$$:   88-block  1
+call    8 never executed
+    $$$$$:   88-block  2
+call    9 never executed
+    $$$$$:   88-block  3
+call   10 never executed
+    $$$$$:   88-block  4
+call   11 never executed
+    $$$$$:   88-block  5
+call   12 never executed
+    $$$$$:   88-block  6
+call   13 never executed
+    $$$$$:   88-block  7
+call   14 never executed
+    $$$$$:   88-block  8
+call   15 never executed
+        -:   89:
+        -:   90:

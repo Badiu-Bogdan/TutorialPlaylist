@@ -8,22 +8,22 @@
         -:    4:
         -:    5:#include "../../Header/View/AdminUi.h"
         -:    6:
-function _Z10print_menuv called 1 returned 100% blocks executed 100%
-        1:    7:void print_menu() {
-        1:    8:    cout << "\n";
-        1:    8-block  0
-call    0 returned 1
-        1:    9:    cout << "Menu: \n";
-call    0 returned 1
-        1:   10:    cout << "Press 1 to print all tutorials. \n";
-call    0 returned 1
-        1:   11:    cout << "Press 2 to add a new tutorial. \n";
-call    0 returned 1
-        1:   12:    cout << "Press 3 to delete a tutorial. \n";
-call    0 returned 1
-        1:   13:    cout << "Press 4 to update a tutorial. \n";
-call    0 returned 1
-        1:   14:}
+function _Z10print_menuv called 0 returned 0% blocks executed 0%
+    #####:    7:void print_menu() {
+    #####:    8:    cout << "\n";
+    %%%%%:    8-block  0
+call    0 never executed
+    #####:    9:    cout << "Menu: \n";
+call    0 never executed
+    #####:   10:    cout << "Press 1 to print all tutorials. \n";
+call    0 never executed
+    #####:   11:    cout << "Press 2 to add a new tutorial. \n";
+call    0 never executed
+    #####:   12:    cout << "Press 3 to delete a tutorial. \n";
+call    0 never executed
+    #####:   13:    cout << "Press 4 to update a tutorial. \n";
+call    0 never executed
+    #####:   14:}
         -:   15:
 function _Z13read_tutorialv called 0 returned 0% blocks executed 0%
     #####:   16:Tutorial read_tutorial() {
@@ -120,38 +120,38 @@ call    4 never executed
     $$$$$:   41-block  3
 call    5 never executed
         -:   42:
-function _ZN7AdminUi4menuEv called 1 returned 100% blocks executed 24%
-        1:   43:void AdminUi::menu() {
+function _ZN7AdminUi4menuEv called 0 returned 0% blocks executed 0%
+    #####:   43:void AdminUi::menu() {
         -:   44:    int choice;
         -:   45:    int id;
         -:   46:    while (true) {
-        1:   47:        print_menu();
-        1:   47-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   48:        cout << "Please enter a value: ";
-        1:   48-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   49:        cin >> choice;
-        1:   49-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   50:        cin.get();
-        1:   50-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   51:        if (choice == 0)
-        1:   51-block  0
-branch  0 taken 1 (fallthrough)
-branch  1 taken 0
-        1:   52:            return;
-        1:   52-block  0
-        1:   52-block  1
+    #####:   47:        print_menu();
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   48:        cout << "Please enter a value: ";
+    %%%%%:   48-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   49:        cin >> choice;
+    %%%%%:   49-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   50:        cin.get();
+    %%%%%:   50-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   51:        if (choice == 0)
+    %%%%%:   51-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   52:            return;
+    %%%%%:   52-block  0
+    %%%%%:   52-block  1
         -:   53:
     #####:   54:        if (choice == 1) {
     %%%%%:   54-block  0
@@ -168,45 +168,49 @@ branch  2 never executed
     %%%%%:   58-block  0
 branch  0 never executed
 branch  1 never executed
-    #####:   59:            Tutorial new_tutorial = read_tutorial();
-    %%%%%:   59-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   60:            controller.addTutorial(new_tutorial);
+        -:   59:            try{
+    #####:   60:                Tutorial new_tutorial = read_tutorial();
     %%%%%:   60-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   61:        }
+    #####:   61:                TutorialValidator::Validate(new_tutorial);
     %%%%%:   61-block  0
 call    0 never executed
-    $$$$$:   61-block  1
-call    1 never executed
-        -:   62:
-    #####:   63:        if(choice == 3)
+branch  1 never executed
+branch  2 never executed
+    #####:   62:                controller.addTutorial(new_tutorial);
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   63:            }
     %%%%%:   63-block  0
+call    0 never executed
+    $$$$$:   63-block  1
+call    1 never executed
+    =====:   64:            catch(InvaludArgument &error)
+    $$$$$:   64-block  0
 branch  0 never executed
 branch  1 never executed
-        -:   64:        {
-    #####:   65:            cout << "Insert id: ";
-    %%%%%:   65-block  0
+    $$$$$:   64-block  1
+call    2 never executed
+        -:   65:            {
+    =====:   66:                cout << error.what();
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    =====:   67:            }
+    $$$$$:   67-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   66:            cin >> id;
-    %%%%%:   66-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   67:            controller.deleteTutorial(id);
-    %%%%%:   67-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+    $$$$$:   67-block  1
+call    3 never executed
         -:   68:        }
         -:   69:
-    #####:   70:        if(choice == 4)
+    #####:   70:        if(choice == 3)
     %%%%%:   70-block  0
 branch  0 never executed
 branch  1 never executed
@@ -221,22 +225,54 @@ branch  2 never executed
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   74:            Tutorial new_tutorial = read_tutorial();
+    #####:   74:            if(id < 0)
     %%%%%:   74-block  0
-call    0 never executed
+branch  0 never executed
 branch  1 never executed
-branch  2 never executed
-    #####:   75:            controller.updateTutorial(id, new_tutorial);
+    #####:   75:                cout << "Id cannot be negative! \n";
     %%%%%:   75-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   76:        }
-    %%%%%:   76-block  0
+        -:   76:            else
+    #####:   77:                controller.deleteTutorial(id);
+    %%%%%:   77-block  0
 call    0 never executed
-    $$$$$:   76-block  1
+branch  1 never executed
+branch  2 never executed
+        -:   78:        }
+        -:   79:
+    #####:   80:        if(choice == 4)
+    %%%%%:   80-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   81:        {
+    #####:   82:            cout << "Insert id: ";
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   83:            cin >> id;
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   84:            Tutorial new_tutorial = read_tutorial();
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   85:            controller.updateTutorial(id, new_tutorial);
+    %%%%%:   85-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   86:        }
+    %%%%%:   86-block  0
+call    0 never executed
+    $$$$$:   86-block  1
 call    1 never executed
-        -:   77:
-    #####:   78:    }
-    %%%%%:   78-block  0
-        -:   79:}
+        -:   87:
+    #####:   88:    }
+    %%%%%:   88-block  0
+        -:   89:}

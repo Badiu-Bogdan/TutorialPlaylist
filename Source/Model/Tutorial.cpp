@@ -45,6 +45,8 @@ bool Tutorial::operator==(const Tutorial &entity) const {
         return false;
     if (link != entity.link)
         return false;
+    if (likes != entity.likes)
+        return false;
     return true;
 }
 

@@ -112,8 +112,10 @@ function _ZN9__gnu_cxx14__alloc_traitsISaIcEcE27_S_propagate_on_copy_assignEv ca
     #####:  104:    { return _Base_type::propagate_on_container_copy_assignment::value; }
     %%%%%:  104-block  0
         -:  105:
-        -:  106:    static constexpr bool _S_propagate_on_move_assign()
-        -:  107:    { return _Base_type::propagate_on_container_move_assignment::value; }
+function _ZN9__gnu_cxx14__alloc_traitsISaIcEcE27_S_propagate_on_move_assignEv called 0 returned 0% blocks executed 0%
+    #####:  106:    static constexpr bool _S_propagate_on_move_assign()
+    #####:  107:    { return _Base_type::propagate_on_container_move_assignment::value; }
+    %%%%%:  107-block  0
         -:  108:
         -:  109:    static constexpr bool _S_propagate_on_swap()
         -:  110:    { return _Base_type::propagate_on_container_swap::value; }

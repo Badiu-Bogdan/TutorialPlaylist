@@ -187,8 +187,16 @@
         -:  183:#if __cpp_constexpr_dynamic_alloc
         -:  184:      constexpr
         -:  185:#endif
+    #####:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+------------------
+_ZNSaI8TutorialED2Ev:
+function _ZNSaI8TutorialED2Ev called 0 returned 0% blocks executed 0%
+    #####:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+------------------
+_ZNSaISt10_List_nodeI8TutorialEED2Ev:
 function _ZNSaISt10_List_nodeI8TutorialEED2Ev called 0 returned 0% blocks executed 0%
     #####:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+------------------
         -:  187:
         -:  188:#if __cplusplus > 201703L
         -:  189:      [[nodiscard,__gnu__::__always_inline__]]
@@ -224,12 +232,18 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
+    %%%%%:  205-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
         -:  206:	  {
     #####:  207:	    ::operator delete(__p);
     %%%%%:  207-block  0
 call    0 never executed
     %%%%%:  207-block  1
 call    1 never executed
+    %%%%%:  207-block  2
+call    2 never executed
     #####:  208:	    return;
         -:  209:	  }
         -:  210:#endif
@@ -238,6 +252,8 @@ call    1 never executed
 call    0 never executed
     %%%%%:  211-block  1
 call    1 never executed
+    %%%%%:  211-block  2
+call    2 never executed
         -:  212:      }
         -:  213:#endif // C++20
         -:  214:

@@ -139,25 +139,36 @@ call    0 never executed
         -:  132:   */
         -:  133:  template<typename _Tp>
         -:  134:    _GLIBCXX14_CONSTEXPR inline void
-        -:  135:    _Destroy(_Tp* __pointer)
+function _ZSt8_DestroyI8TutorialEvPT_ called 0 returned 0% blocks executed 0%
+    #####:  135:    _Destroy(_Tp* __pointer)
         -:  136:    {
         -:  137:#if __cplusplus > 201703L
-        -:  138:      std::destroy_at(__pointer);
+    #####:  138:      std::destroy_at(__pointer);
+    %%%%%:  138-block  0
+call    0 never executed
         -:  139:#else
         -:  140:      __pointer->~_Tp();
         -:  141:#endif
-        -:  142:    }
+    #####:  142:    }
         -:  143:
         -:  144:  template<bool>
         -:  145:    struct _Destroy_aux
         -:  146:    {
         -:  147:      template<typename _ForwardIterator>
         -:  148:	static _GLIBCXX20_CONSTEXPR void
-        -:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZNSt12_Destroy_auxILb0EE9__destroyIP8TutorialEEvT_S4_ called 0 returned 0% blocks executed 0%
+    #####:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  150:	{
-        -:  151:	  for (; __first != __last; ++__first)
-        -:  152:	    std::_Destroy(std::__addressof(*__first));
-        -:  153:	}
+    #####:  151:	  for (; __first != __last; ++__first)
+    %%%%%:  151-block  0
+    %%%%%:  151-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  152:	    std::_Destroy(std::__addressof(*__first));
+    %%%%%:  152-block  0
+call    0 never executed
+call    1 never executed
+    #####:  153:	}
         -:  154:    };
         -:  155:
         -:  156:  template<>
@@ -175,7 +186,8 @@ call    0 never executed
         -:  168:   */
         -:  169:  template<typename _ForwardIterator>
         -:  170:    _GLIBCXX20_CONSTEXPR inline void
-        -:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZSt8_DestroyIP8TutorialEvT_S2_ called 0 returned 0% blocks executed 0%
+    #####:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  172:    {
         -:  173:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  174:                       _Value_type;
@@ -185,11 +197,19 @@ call    0 never executed
         -:  178:		    "value type is destructible");
         -:  179:#endif
         -:  180:#if __cplusplus > 201703L && defined __cpp_lib_is_constant_evaluated
-        -:  181:      if (std::is_constant_evaluated())
-        -:  182:	return _Destroy_aux<false>::__destroy(__first, __last);
+    #####:  181:      if (std::is_constant_evaluated())
+    %%%%%:  181-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  182:	return _Destroy_aux<false>::__destroy(__first, __last);
+    %%%%%:  182-block  0
+call    0 never executed
         -:  183:#endif
         -:  184:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-        -:  185:	__destroy(__first, __last);
+    #####:  185:	__destroy(__first, __last);
+    %%%%%:  185-block  0
+call    0 never executed
         -:  186:    }
         -:  187:
         -:  188:  template<bool>
