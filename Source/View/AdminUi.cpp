@@ -61,7 +61,7 @@ void AdminUi::menu() {
                 TutorialValidator::Validate(new_tutorial);
                 controller.addTutorial(new_tutorial);
             }
-            catch(InvaludArgument &error)
+            catch(InvalidArgument &error)
             {
                 cout << error.what();
             }

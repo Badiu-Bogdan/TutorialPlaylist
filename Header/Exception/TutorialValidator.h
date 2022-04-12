@@ -12,19 +12,19 @@ class TutorialValidator{
 public:
     static void Validate(Tutorial& entity){
         if(entity.getTitle().empty())
-            throw InvaludArgument("Invalid Argument: Title empty string!");
+            throw InvalidArgument("Invalid Argument: Title empty string!");
         if(entity.getPresenter().empty())
-            throw InvaludArgument("Invalid Argument: Presenter empty string!");
+            throw InvalidArgument("Invalid Argument: Presenter empty string!");
         if(entity.getLink().empty())
-            throw InvaludArgument("Invalid Argument: Link empty string!");
+            throw InvalidArgument("Invalid Argument: Link empty string!");
         if(entity.getLikes() < 0)
-            throw InvaludArgument("Invalid Argument: Likes negative number!");
+            throw InvalidArgument("Invalid Argument: Likes negative number!");
         if(entity.getMinutes() == 0 && entity.getSeconds() == 0)
-            throw InvaludArgument("Invalid Argument: Tutorial with duration 0!");
+            throw InvalidArgument("Invalid Argument: Tutorial with duration 0!");
         if(entity.getMinutes() < 0)
-            throw InvaludArgument("Invalid Argument: Minutes negative number!");
+            throw InvalidArgument("Invalid Argument: Minutes negative number!");
         if(entity.getSeconds() < 0)
-            throw InvaludArgument("Invalid Argument: Seconds negative number!");
+            throw InvalidArgument("Invalid Argument: Seconds negative number!");
     };
 };
 

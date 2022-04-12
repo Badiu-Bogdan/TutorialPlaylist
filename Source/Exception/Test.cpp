@@ -65,7 +65,7 @@ void TestTutorial() {
     //Test >>
     string line_cin{">>,>>,10,11,0,>>"};
     Tutorial entity4;
-    Tutorial entity5{">>",">>",10,11,">>"};
+    Tutorial entity5{">>", ">>", 10, 11, ">>"};
     stringstream str_cin(line_cin);
     str_cin >> entity4;
     assert(entity4 == entity5);
@@ -75,8 +75,17 @@ void TestTutorial() {
 }
 
 void TestRepository() {
+    cout << "Starting Repository Test.\n";
     Repository<Tutorial> repo{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\testData.txt"};
 
+    //Test Constructor
+    assert(repo.getSize() == 0);
+
+    //Test Add Element
+    repo.add(Tutorial{"test", "test", 10, 10, "test"});
+    assert(repo.getSize() == 1);
+
+    cout << "Done Repository Test.\n";
 }
 
 void TestAdminController() {

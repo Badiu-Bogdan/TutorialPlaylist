@@ -53,6 +53,8 @@ bool Tutorial::operator==(const Tutorial &entity) const {
 istream &operator>>(istream &is, Tutorial &entity) {
     string line;
     is >> line;
+    if(line.empty())
+        throw InvalidArgument("Empty line. >> operator in Tutorial");
     stringstream ss(line);
     string title, presenter, minutes, seconds, likes, link;
     getline(ss, title, ',');

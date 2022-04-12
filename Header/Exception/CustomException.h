@@ -21,12 +21,12 @@ public:
 
 };
 
-class InvaludArgument:public std::exception
+class InvalidArgument:public std::exception
 {
 private:
     std::string error;
 public:
-    explicit InvaludArgument(std::string new_error){this->error = std::move(new_error);};
+    explicit InvalidArgument(std::string new_error){this->error = std::move(new_error);};
     virtual const char* what() const throw()
     {
         return this->error.c_str();

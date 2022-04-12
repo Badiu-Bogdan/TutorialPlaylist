@@ -23,14 +23,14 @@ void Repository<T>::readStartUp() {
     }
     while (!readFile.eof()) {
         Tutorial entity;
-        readFile >> entity;
         try {
+            readFile >> entity;
             TutorialValidator::Validate(entity);
             this->elems.push_back(entity);
         }
-        catch (InvaludArgument &error) {
-            cout << "1 element not added. Read from file error. \n";
-            cout << entity;
+        catch (InvalidArgument &error) {
+            //cout << "1 element not added. Read from file error. ReadFromStartUp  Repository \n";
+            //cout << entity;
         }
     }
 
@@ -39,6 +39,7 @@ void Repository<T>::readStartUp() {
 
 template<typename T>
 Repository<T>::Repository(const Repository<T> &copy_repository) {
+    this->fileName = copy_repository.fileName;
     for (auto &i: copy_repository) {
         this->elems.push_back(i);
     }
