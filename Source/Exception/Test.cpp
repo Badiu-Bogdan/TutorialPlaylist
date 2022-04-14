@@ -102,6 +102,12 @@ void TestRepository() {
     readFile >> line;
     assert(line.empty());
 
+    //Test Update Element
+    repo.add(Tutorial{"test","test", 10, 10,"test"});
+    Tutorial update{"update","test", 10, 10,"test"};
+    repo.updateElement(i, update);
+    assert(repo[0].getTitle() == "update");
+
     cout << "Done Repository Test.\n";
 }
 
