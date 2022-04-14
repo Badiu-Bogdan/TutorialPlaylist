@@ -20,6 +20,7 @@ public:
     int updateTutorial(int &id, Tutorial& new_tutorial);
     //void setUpElements();
     void printAll();
+    bool checkExistance(Tutorial &entity);
 };
 
 

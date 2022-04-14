@@ -7,9 +7,19 @@
 AdminController::AdminController(Repository<Tutorial> &repository) : repo(repository) {
 }
 
+/*
+ * This function will add a new tutorial in the repository.
+ * The element will not be added 2 times.
+ * If the function is in the repo addTutorial will return 0.
+ * Otherwise will return 1.
+ * Param: Tutorial new_tutorial.
+ * return: 1 for success, otherwise 0.
+ */
 int AdminController::addTutorial(Tutorial &new_tutorial) {
+    if(checkExistance(new_tutorial))
+        return 0;
     repo.add(new_tutorial);
-    return 0;
+    return 1;
 }
 
 /*void AdminController::setUpElements() {
@@ -36,12 +46,32 @@ void AdminController::printAll() {
         cout << i;
 }
 
+
+/*
+ * This function will delete a tutorial from position id in the repository.
+ * Param: int position.
+ * return: 1 for success, otherwise 0.
+ */
 int AdminController::deleteTutorial(int &id) {
+    if(repo.getSize() == 0 || repo.getSize() < id || id < 0)
+        return 0;
     repo.removeElement(id);
-    return 0;
+    return 1;
 }
 
+
+/*
+ * This function will update a tutorial from position id in the repository.
+ * Only the params of the new_tutorial that are defined will be changed in the old Tutorial from the
+ * position id.
+ * It can receive a tutorial only with the title set and will update just the title in the
+ * old one.
+ * Param: int position, Tutorial new_tutorial.
+ * return: 1 for success, otherwise 0.
+ */
 int AdminController::updateTutorial(int &id, Tutorial &new_tutorial) {
+    if(repo.getSize() == 0 || repo.getSize() < id || id < 0)
+        return 0;
     Tutorial existent = repo[id];
     if(!new_tutorial.getTitle().empty())
         existent.setTitle(new_tutorial.getTitle());
@@ -55,7 +85,17 @@ int AdminController::updateTutorial(int &id, Tutorial &new_tutorial) {
         existent.setLink(new_tutorial.getLink());
 
     repo.updateElement(id, existent);
+    return 1;
 
+}
+
+bool AdminController::checkExistance(Tutorial &entity) {
+    bool result = false;
+    for(auto &i:repo.vector())
+        if(i == entity)
+            result = true;
+
+    return result;
 }
 
 

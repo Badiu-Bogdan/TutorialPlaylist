@@ -6,7 +6,9 @@ int main() {
     cout << "Starting Tests: \n";
     TestTutorial();
     TestRepository();
-    cout << "Test Done \n";
+    TestAdminController();
+    TestUserController();
+    cout << "Tests Done \n";
     Repository<Tutorial> AdminAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\data.txt"};
     AdminController AdminAccountController{AdminAccountRepository};
     AdminUi AdminAccount{AdminAccountController};

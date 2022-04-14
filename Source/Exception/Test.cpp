@@ -112,7 +112,34 @@ void TestRepository() {
 }
 
 void TestAdminController() {
+    cout << "Starting Admin Controller testing!\n";
+    ofstream eraseFile("D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\testData.txt");
+    eraseFile.close(); // Opening and closing the file so that existent content will be removed.
+
     Repository<Tutorial> adminRepo{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\testData.txt"};
     AdminController controller{adminRepo};
+
+    //Test AdminController Add
+    Tutorial entity{"test","test", 10, 10,"test"};
+    assert(controller.addTutorial(entity) == 1);
+    assert(controller.addTutorial(entity) == 0);
+
+    //Test Remove
+    int position = 0;
+    assert(controller.deleteTutorial(position) == 1);
+    assert(controller.deleteTutorial(position) == 0);
+
+    //Test Update
+    Tutorial entity2{"update","test", 10, 10,"test"};
+    controller.addTutorial(entity);
+    assert(controller.updateTutorial(position, entity2) == 1);
+
+    cout << "Done Admin Controller Test\n";
+}
+
+void TestUserController(){
+    cout << "Starting User Controller testing!\n";
+
+    cout << "Done User Controller Test\n";
 }
 

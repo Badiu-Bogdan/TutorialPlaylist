@@ -12,5 +12,5 @@
 void TestTutorial();
 void TestRepository();
 void TestAdminController();
-void TestUserService();
-void TestTutorial();
+void TestUserController();
+
