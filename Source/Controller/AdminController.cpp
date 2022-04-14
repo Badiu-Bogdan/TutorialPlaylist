@@ -30,8 +30,10 @@ int AdminController::addTutorial(Tutorial &new_tutorial) {
 }*/
 
 void AdminController::printAll() {
-    for(int i = 0;i < repo.getSize();i++)
-        cout << "id:" << i << ", " << repo[i];
+/*    for(int i = 0;i < repo.getSize();i++)
+        cout << "id:" << i << ", " << repo[i];*/
+    for(auto&i:repo.vector())
+        cout << i;
 }
 
 int AdminController::deleteTutorial(int &id) {

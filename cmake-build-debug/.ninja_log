@@ -1,6 +1,6 @@
 # ninja log v5
 6	2174	6701802983487729	CMakeFiles/Lab_5_6_Pb_4.dir/main.cpp.obj	a24e23ae718077c5
-1	297	6714939399966967	build.ninja	c27bc003c823afd3
+1	297	6715498336065959	build.ninja	c27bc003c823afd3
 778	949	6701808657037685	Lab_5_6_Pb_4.exe	94eb8ec244d0a70
 15	332	6699483395036688	CMakeFiles/Lab_5_6_Pb_4.dir/Source/View/UserUi.cpp.obj	341abb1ee7c7ad3e
 23	335	6699483395056699	CMakeFiles/Lab_5_6_Pb_4.dir/Source/View/Ui.cpp.obj	ea3a12c59170d355

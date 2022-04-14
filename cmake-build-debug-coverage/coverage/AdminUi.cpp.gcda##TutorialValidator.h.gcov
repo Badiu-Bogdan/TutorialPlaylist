@@ -1,0 +1,192 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Header/Exception/TutorialValidator.h
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\View\AdminUi.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\View\AdminUi.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2://
+        -:    3:// Created by badiu on 4/12/2022.
+        -:    4://
+        -:    5:
+        -:    6:#ifndef LAB_5_6_PB_4_TUTORIALVALIDATOR_H
+        -:    7:#define LAB_5_6_PB_4_TUTORIALVALIDATOR_H
+        -:    8:
+        -:    9:#include "../Model/Tutorial.h"
+        -:   10:
+        -:   11:class TutorialValidator{
+        -:   12:public:
+function _ZN17TutorialValidator8ValidateER8Tutorial called 0 returned 0% blocks executed 0%
+    #####:   13:    static void Validate(Tutorial& entity){
+    #####:   14:        if(entity.getTitle().empty())
+    %%%%%:   14-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:   15:            throw InvaludArgument("Invalid Argument: Title empty string!");
+    %%%%%:   15-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   15-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   15-block  2
+call    9 never executed
+    $$$$$:   15-block  3
+    $$$$$:   15-block  4
+call   10 never executed
+    #####:   16:        if(entity.getPresenter().empty())
+    %%%%%:   16-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:   17:            throw InvaludArgument("Invalid Argument: Presenter empty string!");
+    %%%%%:   17-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   17-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   17-block  2
+call    9 never executed
+    $$$$$:   17-block  3
+    $$$$$:   17-block  4
+call   10 never executed
+    #####:   18:        if(entity.getLink().empty())
+    %%%%%:   18-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:   19:            throw InvaludArgument("Invalid Argument: Link empty string!");
+    %%%%%:   19-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   19-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   19-block  2
+call    9 never executed
+    $$$$$:   19-block  3
+    $$$$$:   19-block  4
+call   10 never executed
+    #####:   20:        if(entity.getLikes() < 0)
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   21:            throw InvaludArgument("Invalid Argument: Likes negative number!");
+    %%%%%:   21-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   21-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   21-block  2
+call    9 never executed
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+call   10 never executed
+    #####:   22:        if(entity.getMinutes() == 0 && entity.getSeconds() == 0)
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   22-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   22-block  2
+    %%%%%:   22-block  3
+    %%%%%:   22-block  4
+branch  6 never executed
+branch  7 never executed
+    #####:   23:            throw InvaludArgument("Invalid Argument: Tutorial with duration 0!");
+    %%%%%:   23-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   23-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   23-block  2
+call    9 never executed
+    $$$$$:   23-block  3
+    $$$$$:   23-block  4
+call   10 never executed
+    #####:   24:        if(entity.getMinutes() < 0)
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   25:            throw InvaludArgument("Invalid Argument: Minutes negative number!");
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   25-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   25-block  2
+call    9 never executed
+    $$$$$:   25-block  3
+    $$$$$:   25-block  4
+call   10 never executed
+    #####:   26:        if(entity.getSeconds() < 0)
+    %%%%%:   26-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   27:            throw InvaludArgument("Invalid Argument: Seconds negative number!");
+    %%%%%:   27-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   27-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   27-block  2
+call    9 never executed
+    $$$$$:   27-block  3
+    $$$$$:   27-block  4
+call   10 never executed
+    #####:   28:    };
+    %%%%%:   28-block  0
+        -:   29:};
+        -:   30:
+        -:   31:#endif //LAB_5_6_PB_4_TUTORIALVALIDATOR_H

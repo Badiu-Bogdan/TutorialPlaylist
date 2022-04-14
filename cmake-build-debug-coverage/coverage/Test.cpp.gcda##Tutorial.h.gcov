@@ -1,0 +1,82 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Header/Model/Tutorial.h
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Exception\Test.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Exception\Test.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2://
+        -:    3:// Created by badiu on 3/22/2022.
+        -:    4://
+        -:    5:
+        -:    6:#ifndef LAB_5_6_PB_4_TUTORIAL_H
+        -:    7:#define LAB_5_6_PB_4_TUTORIAL_H
+        -:    8:#include <string>
+        -:    9:#include <iostream>
+        -:   10:#include <new>
+        -:   11:#include <fstream>
+        -:   12:#include <sstream>
+        -:   13:#include <vector>
+        -:   14:#include <cstdlib>
+        -:   15:#include "../../Header/Exception/CustomException.h"
+        -:   16:
+        -:   17:using namespace std;
+        -:   18:
+        -:   19:class Tutorial {
+        -:   20:private:
+        -:   21:    string title;
+        -:   22:    string presenter;
+        -:   23:    int minutes{}, seconds{};
+        -:   24:    int likes{};
+        -:   25:    string link;
+        -:   26:
+        -:   27:
+        -:   28:public:
+        -:   29:    Tutorial();
+        -:   30:    Tutorial(const string &new_title,const string &new_presenter,const int &new_minutes,const int &new_seconds,const string &new_link);
+        -:   31:
+function _ZN8Tutorial8getTitleB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   32:    string getTitle(){return title;};
+    %%%%%:   32-block  0
+call    0 never executed
+        -:   33:    void setTitle(string new_title);
+        -:   34:
+function _ZN8Tutorial12getPresenterB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   35:    string getPresenter(){return presenter;};
+    %%%%%:   35-block  0
+call    0 never executed
+        -:   36:    void setPresenter(string new_presenter);
+        -:   37:
+function _ZN8Tutorial10getMinutesEv called 0 returned 0% blocks executed 0%
+    #####:   38:    int getMinutes(){return minutes;};
+    %%%%%:   38-block  0
+        -:   39:    void setMinutes(int new_minutes);
+        -:   40:
+function _ZN8Tutorial10getSecondsEv called 0 returned 0% blocks executed 0%
+    #####:   41:    int getSeconds(){return seconds;};
+    %%%%%:   41-block  0
+function _ZN8Tutorial10setSecondsEi called 0 returned 0% blocks executed 0%
+    #####:   42:    inline void setSeconds(int new_seconds){seconds = new_seconds;};
+        -:   43:
+function _ZN8Tutorial8getLikesEv called 0 returned 0% blocks executed 0%
+    #####:   44:    int getLikes(){return likes;};
+    %%%%%:   44-block  0
+function _ZN8Tutorial4likeEv called 0 returned 0% blocks executed 0%
+    #####:   45:    void like(){likes++;};
+function _ZN8Tutorial7dislikeEv called 2 returned 100% blocks executed 100%
+        2:   46:    void dislike(){likes--;};
+        -:   47:    inline void setLikes(int &new_likes){likes = new_likes;};
+        -:   48:
+function _ZN8Tutorial7getLinkB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   49:    string getLink(){return link;};
+    %%%%%:   49-block  0
+call    0 never executed
+function _ZN8Tutorial7setLinkENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   50:    inline void setLink(string new_link){link = new_link;};
+    %%%%%:   50-block  0
+call    0 never executed
+        -:   51:    friend ostream& operator<<(ostream& os, const Tutorial& entity);
+        -:   52:    friend istream& operator>>(istream& is, Tutorial& entity);
+        -:   53:    bool operator== (const Tutorial& entity) const;
+        -:   54:};
+        -:   55:
+        -:   56:
+        -:   57:#endif //LAB_5_6_PB_4_TUTORIAL_H

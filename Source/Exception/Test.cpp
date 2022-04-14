@@ -76,6 +76,8 @@ void TestTutorial() {
 
 void TestRepository() {
     cout << "Starting Repository Test.\n";
+    ofstream eraseFile("D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\testData.txt");
+    eraseFile.close();
     Repository<Tutorial> repo{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\testData.txt"};
 
     //Test Constructor
@@ -84,6 +86,13 @@ void TestRepository() {
     //Test Add Element
     repo.add(Tutorial{"test", "test", 10, 10, "test"});
     assert(repo.getSize() == 1);
+
+    //Test Write To File
+    ifstream readFile("D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\testData.txt");
+    Tutorial entity;
+    readFile >> entity;
+    Tutorial entity1{"test","test",10,10,"test"};
+    assert(entity == entity1);
 
     cout << "Done Repository Test.\n";
 }

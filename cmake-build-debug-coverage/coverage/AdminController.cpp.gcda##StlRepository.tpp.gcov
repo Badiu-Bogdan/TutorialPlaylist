@@ -1,0 +1,187 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Header/Model/StlRepository.tpp
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Controller\AdminController.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Controller\AdminController.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2://
+        -:    3:// Created by badiu on 4/10/2022.
+        -:    4://
+        -:    5:
+        -:    6:#ifndef LAB_5_6_PB_4_STLREPOSITORY_TPP
+        -:    7:#define LAB_5_6_PB_4_STLREPOSITORY_TPP
+        -:    8:
+        -:    9:#include "Repository.h"
+        -:   10:
+        -:   11:template<typename T>
+        -:   12:Repository<T>::Repository(const string &new_fileName):fileName(new_fileName) {
+        -:   13:    readStartUp();
+        -:   14:}
+        -:   15:
+        -:   16:template<typename T>
+        -:   17:void Repository<T>::readStartUp() {
+        -:   18:    ifstream readFile(this->fileName);
+        -:   19:    if (!readFile) {
+        -:   20:        //File not opened correctly
+        -:   21:    } else {
+        -:   22:        //File opened correctly
+        -:   23:    }
+        -:   24:    while (!readFile.eof()) {
+        -:   25:        Tutorial entity;
+        -:   26:        readFile >> entity;
+        -:   27:        try {
+        -:   28:            TutorialValidator::Validate(entity);
+        -:   29:            this->elems.push_back(entity);
+        -:   30:        }
+        -:   31:        catch (InvaludArgument &error) {
+        -:   32:            cout << "1 element not added. Read from file error. \n";
+        -:   33:            cout << entity;
+        -:   34:        }
+        -:   35:    }
+        -:   36:
+        -:   37:    readFile.close();
+        -:   38:}
+        -:   39:
+        -:   40:template<typename T>
+        -:   41:Repository<T>::Repository(const Repository<T> &copy_repository) {
+        -:   42:    for (auto &i: copy_repository) {
+        -:   43:        this->elems.push_back(i);
+        -:   44:    }
+        -:   45:}
+        -:   46:
+        -:   47:template<typename T>
+        -:   48:Repository<T>::~Repository() {
+        -:   49:
+        -:   50:}
+        -:   51:
+        -:   52:template<typename T>
+function _ZN10RepositoryI8TutorialE3addES0_ called 0 returned 0% blocks executed 0%
+    #####:   53:void Repository<T>::add(T entity) {
+    #####:   54:    this->elems.push_back(entity);
+    %%%%%:   54-block  0
+call    0 never executed
+    #####:   55:    writeInFile(entity);
+call    0 never executed
+        -:   56:
+    #####:   57:}
+        -:   58:
+        -:   59:template<typename T>
+function _ZN10RepositoryI8TutorialE13removeElementERi called 0 returned 0% blocks executed 0%
+    #####:   60:void Repository<T>::removeElement(int &pos) {
+    #####:   61:    this->elems.erase(this->elems.begin() + pos);
+    %%%%%:   61-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   61-block  1
+    $$$$$:   61-block  2
+    #####:   62:    reWriteFile();
+    %%%%%:   62-block  0
+call    0 never executed
+    #####:   63:}
+        -:   64:
+        -:   65:template<typename T>
+function _ZN10RepositoryI8TutorialE13updateElementERiRS0_ called 0 returned 0% blocks executed 0%
+    #####:   66:void Repository<T>::updateElement(int &pos, T &new_entity) {
+    #####:   67:    this->elems[pos] = new_entity;
+    %%%%%:   67-block  0
+call    0 never executed
+call    1 never executed
+    #####:   68:    reWriteFile();
+call    0 never executed
+        -:   69:
+    #####:   70:}
+        -:   71:
+        -:   72:template<typename T>
+function _ZN10RepositoryI8TutorialEixEi called 0 returned 0% blocks executed 0%
+    #####:   73:T &Repository<T>::operator[](int pos) {
+    #####:   74:    return this->elems[pos];
+    %%%%%:   74-block  0
+call    0 never executed
+        -:   75:}
+        -:   76:
+        -:   77:template<typename T>
+function _ZN10RepositoryI8TutorialE7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:   78:int Repository<T>::getSize() {
+    #####:   79:    return this->elems.size();
+    %%%%%:   79-block  0
+call    0 never executed
+        -:   80:}
+        -:   81:
+        -:   82:template<typename T>
+function _ZN10RepositoryI8TutorialE11writeInFileERS0_ called 0 returned 0% blocks executed 0%
+    #####:   83:void Repository<T>::writeInFile(T &entity) {
+    #####:   84:    ofstream file(this->fileName, ios_base::app);
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   85:    if (!file) {
+    %%%%%:   85-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   85-block  1
+branch  3 never executed
+branch  4 never executed
+        -:   86:        //file not opened
+        -:   87:    } else {
+        -:   88:        //file opened
+    #####:   89:        file << entity;
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   90:    }
+        -:   91:
+    #####:   92:}
+    %%%%%:   92-block  0
+call    0 never executed
+    $$$$$:   92-block  1
+call    1 never executed
+        -:   93:
+        -:   94:template<typename T>
+function _ZN10RepositoryI8TutorialE11reWriteFileEv called 0 returned 0% blocks executed 0%
+    #####:   95:void Repository<T>::reWriteFile() {
+    #####:   96:    ofstream file(this->fileName);
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   97:    if (!file) {
+    %%%%%:   97-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   97-block  1
+branch  3 never executed
+branch  4 never executed
+        -:   98:        //file not opened
+        -:   99:    } else {
+    #####:  100:        for (auto &i: this->elems)
+    %%%%%:  100-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  100-block  1
+call    2 never executed
+    %%%%%:  100-block  2
+call    3 never executed
+    %%%%%:  100-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  101:            file << i;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  102:    }
+        -:  103:
+    #####:  104:}
+    %%%%%:  104-block  0
+call    0 never executed
+    $$$$$:  104-block  1
+call    1 never executed
+        -:  105:
+        -:  106:#endif //LAB_5_6_PB_4_STLREPOSITORY_TPP

@@ -1,0 +1,856 @@
+        -:    0:Source:D:/Fisiere Facultate An3/OOP/Lab 5-6 Pb.4/Source/Exception/Test.cpp
+        -:    0:Graph:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Exception\Test.cpp.gcno
+        -:    0:Data:D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\cmake-build-debug-coverage\CMakeFiles\Lab_5_6_Pb_4.dir\Source\Exception\Test.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by badiu on 4/12/2022.
+        -:    3://
+        -:    4:#include "D:\Fisiere Facultate An3\OOP\Lab 5-6 Pb.4\Header\Exception\Test.h"
+        -:    5:
+function _Z12TestTutorialv called 1 returned 100% blocks executed 47%
+        1:    6:void TestTutorial() {
+        1:    7:    cout << "Starting Tutorial Test.\n";
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    8:    Tutorial entity{"Titlu", "Prezentator", 10, 11, "link"};
+        1:    8-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    8-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:    8-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:    8-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:    8-block  4
+    $$$$$:    8-block  5
+    $$$$$:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+        -:    9:
+        -:   10:    //Test getter
+       1*:   11:    assert(entity.getTitle() == "Titlu");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   11-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   11-block  2
+    %%%%%:   11-block  3
+        1:   11-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   11-block  5
+call   11 returned 1
+    $$$$$:   11-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   11-block  7
+call   14 never executed
+    $$$$$:   11-block  8
+       1*:   12:    assert(entity.getPresenter() == "Prezentator");
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   12-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   12-block  3
+    %%%%%:   12-block  4
+        1:   12-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   12-block  6
+call   11 returned 1
+    $$$$$:   12-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   12-block  8
+call   14 never executed
+    $$$$$:   12-block  9
+       1*:   13:    assert(entity.getMinutes() == 10);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   13-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   13-block  2
+    %%%%%:   13-block  3
+       1*:   14:    assert(entity.getSeconds() == 11);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   14-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   14-block  2
+    %%%%%:   14-block  3
+       1*:   15:    assert(entity.getLink() == "link");
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   15-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   15-block  3
+    %%%%%:   15-block  4
+        1:   15-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   15-block  6
+call   11 returned 1
+    $$$$$:   15-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   15-block  8
+call   14 never executed
+    $$$$$:   15-block  9
+       1*:   16:    assert(entity.getLikes() == 0);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   16-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   16-block  2
+    %%%%%:   16-block  3
+        -:   17:
+        -:   18:    //Test setter
+        1:   19:    entity.setTitle("Titlu nou");
+        1:   19-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   19-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   19-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   19-block  3
+call    9 never executed
+    $$$$$:   19-block  4
+    $$$$$:   19-block  5
+call   10 never executed
+    $$$$$:   19-block  6
+       1*:   20:    assert(entity.getTitle() == "Titlu nou");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   20-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   20-block  2
+    %%%%%:   20-block  3
+        1:   20-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   20-block  5
+call   11 returned 1
+    $$$$$:   20-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   20-block  7
+call   14 never executed
+    $$$$$:   20-block  8
+        1:   21:    entity.setPresenter("Prezentator nou");
+        1:   21-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   21-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   21-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   21-block  3
+call    9 never executed
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+call   10 never executed
+    $$$$$:   21-block  6
+       1*:   22:    assert(entity.getPresenter() == "Prezentator nou");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   22-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   22-block  2
+    %%%%%:   22-block  3
+        1:   22-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   22-block  5
+call   11 returned 1
+    $$$$$:   22-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   22-block  7
+call   14 never executed
+    $$$$$:   22-block  8
+        1:   23:    entity.setMinutes(20);
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   24:    assert(entity.getMinutes() == 20);
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   24-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   24-block  2
+    %%%%%:   24-block  3
+        1:   25:    entity.setSeconds(22);
+        1:   25-block  0
+call    0 returned 1
+       1*:   26:    assert(entity.getSeconds() == 22);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   26-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   26-block  1
+    %%%%%:   26-block  2
+        1:   27:    entity.setLink("link nou");
+        1:   27-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   27-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   27-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   27-block  3
+call    9 never executed
+    $$$$$:   27-block  4
+    $$$$$:   27-block  5
+call   10 never executed
+    $$$$$:   27-block  6
+       1*:   28:    assert(entity.getLink() == "link nou");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   28-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   28-block  2
+    %%%%%:   28-block  3
+        1:   28-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   28-block  5
+call   11 returned 1
+    $$$$$:   28-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   28-block  7
+call   14 never executed
+    $$$$$:   28-block  8
+        1:   29:    entity.like();
+        1:   29-block  0
+call    0 returned 1
+       1*:   30:    assert(entity.getLikes() == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   30-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   30-block  1
+    %%%%%:   30-block  2
+        1:   31:    entity.dislike();
+        1:   31-block  0
+call    0 returned 1
+       1*:   32:    assert(entity.getLikes() == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   32-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   32-block  1
+    %%%%%:   32-block  2
+        -:   33:
+        -:   34:    //Test == operator
+        2:   35:    Tutorial entity1{"Titlu", "Prezentator", 10, 11, "link"};
+        1:   35-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   35-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   35-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   35-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   35-block  4
+    $$$$$:   35-block  5
+    $$$$$:   35-block  6
+    $$$$$:   35-block  7
+    $$$$$:   35-block  8
+    $$$$$:   35-block  9
+    $$$$$:   35-block 10
+    $$$$$:   35-block 11
+        2:   36:    Tutorial entity2{"Titlu", "Prezentator", 10, 11, "link"};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   36-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   36-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   36-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   36-block  3
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+    $$$$$:   36-block  6
+    $$$$$:   36-block  7
+    $$$$$:   36-block  8
+    $$$$$:   36-block  9
+    $$$$$:   36-block 10
+       1*:   37:    assert(entity1 == entity2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   37-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   37-block  2
+    %%%%%:   37-block  3
+        1:   38:    entity1.setTitle("test");
+        1:   38-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   38-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   38-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   38-block  3
+call    9 never executed
+    $$$$$:   38-block  4
+    $$$$$:   38-block  5
+call   10 never executed
+    $$$$$:   38-block  6
+       1*:   39:    assert(entity1 != entity2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   39-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   39-block  2
+    %%%%%:   39-block  3
+        1:   40:    entity1.setTitle("Titlu");
+        1:   40-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   40-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   40-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   40-block  3
+call    9 never executed
+    $$$$$:   40-block  4
+    $$$$$:   40-block  5
+call   10 never executed
+    $$$$$:   40-block  6
+        1:   41:    entity1.setPresenter("test");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   41-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   41-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   41-block  2
+call    9 never executed
+    $$$$$:   41-block  3
+    $$$$$:   41-block  4
+call   10 never executed
+    $$$$$:   41-block  5
+       1*:   42:    assert(entity1 != entity2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   42-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   42-block  2
+    %%%%%:   42-block  3
+        1:   43:    entity1.setPresenter("Prezentator");
+        1:   43-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   43-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   43-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   43-block  3
+call    9 never executed
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+call   10 never executed
+    $$$$$:   43-block  6
+        1:   44:    entity1.setMinutes(30);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   45:    assert(entity1 != entity2);
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   45-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   45-block  3
+    %%%%%:   45-block  4
+        1:   46:    entity1.setMinutes(10);
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47:    entity1.setSeconds(30);
+        1:   47-block  0
+call    0 returned 1
+       1*:   48:    assert(entity1 != entity2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   48-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   48-block  2
+    %%%%%:   48-block  3
+        1:   49:    entity1.setSeconds(11);
+        1:   49-block  0
+call    0 returned 1
+        1:   50:    entity1.setLink("test");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   50-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   50-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   50-block  2
+call    9 never executed
+    $$$$$:   50-block  3
+    $$$$$:   50-block  4
+call   10 never executed
+    $$$$$:   50-block  5
+       1*:   51:    assert(entity1 != entity2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   51-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   51-block  2
+    %%%%%:   51-block  3
+        1:   52:    entity1.setLink("link");
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   52-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   52-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   52-block  3
+call    9 never executed
+    $$$$$:   52-block  4
+    $$$$$:   52-block  5
+call   10 never executed
+    $$$$$:   52-block  6
+        1:   53:    entity1.like();
+call    0 returned 1
+       1*:   54:    assert(entity1 != entity2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   54-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   54-block  2
+    %%%%%:   54-block  3
+        1:   55:    entity1.dislike();
+        1:   55-block  0
+call    0 returned 1
+        -:   56:
+        -:   57:    //Test <<
+        2:   58:    Tutorial entity3{"<<", "<<", 10, 11, "<<"};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   58-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   58-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   58-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   58-block  3
+    $$$$$:   58-block  4
+    $$$$$:   58-block  5
+    $$$$$:   58-block  6
+    $$$$$:   58-block  7
+    $$$$$:   58-block  8
+    $$$$$:   58-block  9
+    $$$$$:   58-block 10
+        1:   59:    std::stringstream str;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60:    str << entity3;
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61:    string line_cou;
+        1:   61-block  0
+call    0 returned 1
+        1:   62:    str >> line_cou;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   63:    assert(line_cou == "<<,<<,10,11,0,<<");
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   63-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   63-block  2
+    %%%%%:   63-block  3
+        -:   64:
+        -:   65:    //Test >>
+        1:   66:    string line_cin{">>,>>,10,11,0,>>"};
+        1:   66-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   66-block  1
+        1:   67:    Tutorial entity4;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   68:    Tutorial entity5{">>",">>",10,11,">>"};
+        1:   68-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   68-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   68-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   68-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   68-block  4
+    $$$$$:   68-block  5
+    $$$$$:   68-block  6
+    $$$$$:   68-block  7
+    $$$$$:   68-block  8
+    $$$$$:   68-block  9
+    $$$$$:   68-block 10
+    $$$$$:   68-block 11
+        1:   69:    stringstream str_cin(line_cin);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   70:    str_cin >> entity4;
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   71:    assert(entity4 == entity5);
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   71-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   71-block  3
+    %%%%%:   71-block  4
+        -:   72:
+        -:   73:
+        1:   74:    cout << "Done Tutorial Test.\n";
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   75:}
+        1:   75-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+    $$$$$:   75-block  1
+call   10 never executed
+    $$$$$:   75-block  2
+call   11 never executed
+    $$$$$:   75-block  3
+call   12 never executed
+    $$$$$:   75-block  4
+call   13 never executed
+    $$$$$:   75-block  5
+call   14 never executed
+    $$$$$:   75-block  6
+call   15 never executed
+    $$$$$:   75-block  7
+call   16 never executed
+    $$$$$:   75-block  8
+call   17 never executed
+    $$$$$:   75-block  9
+call   18 never executed
+    $$$$$:   75-block 10
+call   19 never executed
+        -:   76:
+function _Z14TestRepositoryv called 0 returned 0% blocks executed 0%
+    #####:   77:void TestRepository() {
+    #####:   78:    Repository<Tutorial> repo{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\testData.txt"};
+    %%%%%:   78-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   78-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+call    7 never executed
+    $$$$$:   78-block  2
+    $$$$$:   78-block  3
+        -:   79:
+    #####:   80:}
+call    0 never executed
+        -:   81:
+function _Z19TestAdminControllerv called 0 returned 0% blocks executed 0%
+    #####:   82:void TestAdminController() {
+    #####:   83:    Repository<Tutorial> adminRepo{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\testData.txt"};
+    %%%%%:   83-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   83-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+call    7 never executed
+    $$$$$:   83-block  2
+    $$$$$:   83-block  3
+    #####:   84:    AdminController controller{adminRepo};
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   85:}
+    %%%%%:   85-block  0
+call    0 never executed
+    $$$$$:   85-block  1
+call    1 never executed
+        -:   86:

@@ -23,6 +23,8 @@ public:
     void removeElement(int &pos);
     void updateElement(int &pos, T& new_entity);
     T &operator[](int pos);
+    auto vector(){return this->elems;
+    }
     int getSize();
 
 private:

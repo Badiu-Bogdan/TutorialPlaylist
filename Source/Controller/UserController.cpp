@@ -10,10 +10,12 @@ UserController::UserController(Repository<Tutorial> &new_database, Repository<Tu
 }
 
 void UserController::printWatchList() {
-    for(int i = 0; i < watchList.getSize();i++)
+/*    for(int i = 0; i < watchList.getSize();i++)
         cout << watchList[i];
+    cout << "Done. \n";*/
+    for(auto&i:watchList.vector())
+        cout << i;
     cout << "Done. \n";
-
 }
 
 
@@ -28,8 +30,11 @@ Repository<struct Tutorial> UserController::getTutorialsByPresenter(string &pres
 }
 
 void UserController::printTutorialList() {
-    for(int i = 0; i < database.getSize();i++)
-        cout << database[i];
+/*    for(int i = 0; i < database.getSize();i++)
+        cout << database[i];*/
+    for(auto&i:database.vector())
+        cout << i;
+
     cout << "Done. \n";
 }
 
@@ -58,7 +63,9 @@ void UserController::likeTutorial(Tutorial &entity) {
 
 list<Tutorial> UserController::getWatchList() {
     list<Tutorial> aux;
-    for(int i=0;i<watchList.getSize();i++)
-        aux.push_back(watchList[i]);
+/*    for(int i=0;i<watchList.getSize();i++)
+        aux.push_back(watchList[i]);*/
+    for(auto&i:watchList.vector())
+        aux.push_back(i);
     return aux;
 }
