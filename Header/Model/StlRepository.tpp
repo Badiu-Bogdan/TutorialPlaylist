@@ -10,7 +10,6 @@
 
 template<typename T>
 Repository<T>::Repository(const string &new_fileName):fileName(new_fileName) {
-    readStartUp();
 }
 
 template<typename T>
