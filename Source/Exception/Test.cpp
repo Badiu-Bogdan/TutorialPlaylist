@@ -94,6 +94,14 @@ void TestRepository() {
     Tutorial entity1{"test","test",10,10,"test"};
     assert(entity == entity1);
 
+    //Test Remove Element
+    int i = 0;
+    repo.removeElement(i);
+    assert(repo.getSize() == 0);
+    string line;
+    readFile >> line;
+    assert(line.empty());
+
     cout << "Done Repository Test.\n";
 }
 
