@@ -25,7 +25,7 @@ void Tutorial::setMinutes(int new_minutes) {
 
 ostream &operator<<(ostream &os, const Tutorial &entity) {
     os << entity.title << "," << entity.presenter << "," << entity.minutes << "," << entity.seconds << ","
-       << entity.likes << "," << entity.link << " \n";
+       << entity.likes << "," << entity.link << endl;
 
     return os;
 }
@@ -52,7 +52,8 @@ bool Tutorial::operator==(const Tutorial &entity) const {
 
 istream &operator>>(istream &is, Tutorial &entity) {
     string line;
-    is >> line;
+    //is >> line;
+    getline(is, line);
     if(line.empty())
         throw InvalidArgument("Empty line. >> operator in Tutorial");
     stringstream ss(line);

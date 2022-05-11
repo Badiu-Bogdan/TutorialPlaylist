@@ -4,7 +4,7 @@
 
 #include "../../Header/Controller/AdminController.h"
 
-AdminController::AdminController(Repository<Tutorial> &repository) : repo(repository) {
+AdminController::AdminController(Repository<Tutorial> &repository) : repo(&repository) {
 }
 
 /*
@@ -18,7 +18,7 @@ AdminController::AdminController(Repository<Tutorial> &repository) : repo(reposi
 int AdminController::addTutorial(Tutorial &new_tutorial) {
     if(checkExistance(new_tutorial))
         return 0;
-    repo.add(new_tutorial);
+    repo->add(new_tutorial);
     return 1;
 }
 
@@ -42,7 +42,7 @@ int AdminController::addTutorial(Tutorial &new_tutorial) {
 void AdminController::printAll() {
 /*    for(int i = 0;i < repo.getSize();i++)
         cout << "id:" << i << ", " << repo[i];*/
-    for(auto&i:repo.vector())
+    for(auto&i:repo->vector())
         cout << i;
 }
 
@@ -53,9 +53,9 @@ void AdminController::printAll() {
  * return: 1 for success, otherwise 0.
  */
 int AdminController::deleteTutorial(int &id) {
-    if(repo.getSize() == 0 || repo.getSize() < id || id < 0)
+    if(repo->getSize() == 0 || repo->getSize() < id || id < 0)
         return 0;
-    repo.removeElement(id);
+    repo->removeElement(id);
     return 1;
 }
 
@@ -70,9 +70,9 @@ int AdminController::deleteTutorial(int &id) {
  * return: 1 for success, otherwise 0.
  */
 int AdminController::updateTutorial(int &id, Tutorial &new_tutorial) {
-    if(repo.getSize() == 0 || repo.getSize() < id || id < 0)
+    if(repo->getSize() == 0 || repo->getSize() < id || id < 0)
         return 0;
-    Tutorial existent = repo[id];
+    Tutorial existent = (repo)->operator[](id);
     if(!new_tutorial.getTitle().empty())
         existent.setTitle(new_tutorial.getTitle());
     if(!new_tutorial.getPresenter().empty())
@@ -84,14 +84,14 @@ int AdminController::updateTutorial(int &id, Tutorial &new_tutorial) {
     if(!new_tutorial.getLink().empty())
         existent.setLink(new_tutorial.getLink());
 
-    repo.updateElement(id, existent);
+    repo->updateElement(id, existent);
     return 1;
 
 }
 
 bool AdminController::checkExistance(Tutorial &entity) {
     bool result = false;
-    for(auto &i:repo.vector())
+    for(auto &i:repo->vector())
         if(i == entity)
             result = true;
 

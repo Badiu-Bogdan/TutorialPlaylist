@@ -12,8 +12,8 @@
 
 class UserController {
 private:
-    Repository<Tutorial>& database;
-    Repository<Tutorial>& watchList;
+    Repository<Tutorial>* database;
+    Repository<Tutorial>* watchList;
 
 public:
     UserController(Repository<Tutorial>& new_database, Repository<Tutorial>& new_watchlist);
@@ -22,7 +22,7 @@ public:
     int addTutorialToWatchList(Tutorial& entity);
     int deleteTutorialFromWatchList(Tutorial &entity);
     void likeTutorial(Tutorial& entity);
-    Repository<Tutorial> getTutorialsByPresenter(string &presenter);
+    vector<Tutorial> getTutorialsByPresenter(string &presenter);
     list<Tutorial> getWatchList();
 
 };

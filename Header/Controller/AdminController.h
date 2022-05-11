@@ -11,7 +11,7 @@
 
 class AdminController {
 private:
-    Repository<Tutorial> &repo;
+    Repository<Tutorial> *repo;
 
 public:
     explicit AdminController(Repository<Tutorial> &repository);

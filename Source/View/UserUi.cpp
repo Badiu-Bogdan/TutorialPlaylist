@@ -47,36 +47,37 @@ void UserUi::menu() {
 }
 
 void UserUi::printTutorialsByPresenter(string &presenter) {
-    Repository tutorial_list = controller.getTutorialsByPresenter(
+    //First if to print in case of a empty presenter i will print the list with all elements at once
+    if (presenter.empty()) {
+        controller.printTutorialList();
+        return;
+    }
+
+    vector<Tutorial> tutorial_list = controller.getTutorialsByPresenter(
             presenter); //Iau lista sortata sau intreaga din controller
 
-    //First if to print in case of a empty the the list with all elements all at once
-    if (presenter.empty())
-        controller.printTutorialList();
-    else//Second to print in case of a presenter the list with elements one by one
-    {
-        int choice;
-        for (int i = 0; i < tutorial_list.getSize(); i++) {
-            cout << tutorial_list[i];
-            cout << "Open in browser(Press 1) or next(Press 2) or addToWatchList(Press3) or exit(Press 0): ";
-            cin >> choice;
-            if (choice == 1) { //Creating a char to execute the open command
-                string command = "<Chrome> " + tutorial_list[i].getLink();
-                char *str = &command[0];
-                system(str);
-            }
 
-            if (choice == 2 && (i + 1) == tutorial_list.getSize()) //Daca am ajuns la ultimul element o iau de la capat
-                i = -1;
-
-            if(choice == 3)
-                this->controller.addTutorialToWatchList(tutorial_list[i]);
-
-            if (choice == 0)
-                break;
+    int choice;
+    for (int i = 0; i < tutorial_list.size(); i++) {
+        cout << tutorial_list[i];
+        cout << "Open in browser(Press 1) or next(Press 2) or addToWatchList(Press3) or exit(Press 0): ";
+        cin >> choice;
+        if (choice == 1) { //Creating a char to execute the open command
+            string command = "<Chrome> " + tutorial_list[i].getLink();
+            char *str = &command[0];
+            system(str);
         }
-        cout << "Done! \n";
+
+        if (choice == 2 && (i + 1) == tutorial_list.size()) //Daca am ajuns la ultimul element o iau de la capat
+            i = -1;
+
+        if(choice == 3)
+            this->controller.addTutorialToWatchList(tutorial_list[i]);
+
+        if (choice == 0)
+            break;
     }
+    cout << "Done! \n";
 }
 
 void UserUi::editWatchList() {

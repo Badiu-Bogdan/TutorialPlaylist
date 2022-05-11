@@ -9,24 +9,22 @@ int main() {
     TestAdminController();
     TestUserController();
     cout << "Tests Done \n";*/
-
-/*    Repository<Tutorial> AdminAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\data.txt"};
-    AdminController AdminAccountController{AdminAccountRepository};
-    AdminUi AdminAccount{AdminAccountController};
+/*
 
     Repository<Tutorial> UserAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\watchListData.txt"};
     UserController UserAccountController{AdminAccountRepository, UserAccountRepository};
     UserUi UserAccount{UserAccountController};*/
+
+
+    FileRepository<Tutorial> AdminAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\data.txt"};
+    AdminController AdminAccountController{AdminAccountRepository};
+    AdminUi AdminAccount{AdminAccountController};
 
     int choice;
     cout << "Type 1 for csv and 2 for html: ";
     cin >> choice;
     if(choice == 1)
     {
-        FileRepository<Tutorial> AdminAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\data.txt"};
-        AdminController AdminAccountController{AdminAccountRepository};
-        AdminUi AdminAccount{AdminAccountController};
-
         FileRepository<Tutorial> UserAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\watchListData.txt"};
         UserController UserAccountController{AdminAccountRepository, UserAccountRepository};
         UserUi UserAccount{UserAccountController};
@@ -45,7 +43,21 @@ int main() {
     }
     if(choice == 2)
     {
+        HtmlRepository<Tutorial> UserAccountRepository{"D:\\Fisiere Facultate An3\\OOP\\Lab 5-6 Pb.4\\Database\\webpage.html"};
+        UserController UserAccountController{AdminAccountRepository, UserAccountRepository};
+        UserUi UserAccount{UserAccountController};
 
+        int type;
+        while(true) {
+            cout << "For Admin press 1 \nFor User press 2. \n";
+            cin >> type;
+            if (type == 1)
+                AdminAccount.menu();
+            if (type == 2)
+                UserAccount.menu();
+            else
+                break;
+        }
     }
     else
         return 0;
